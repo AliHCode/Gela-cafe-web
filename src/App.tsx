@@ -207,7 +207,7 @@ const OurStory = ({ isRTL, lang }: { isRTL: boolean, lang: 'en' | 'ar' }) => {
               whileInView={{ opacity: 1, y: 0 }}
               className="lg:col-span-5 aspect-[3/4] rounded-[40px] overflow-hidden"
             >
-              <img src="/ourstory/story1 (1).jpg" alt="Process" className="w-full h-full object-cover" />
+              <img src="/ourstory/1.jpg" alt="Process" className="w-full h-full object-cover" />
             </motion.div>
             
             <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6 h-full">
@@ -535,6 +535,8 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const isLightHeader = view === 'story' && !isScrolled;
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -562,7 +564,7 @@ export default function App() {
             className="group relative flex items-center gap-2 shrink-0 z-10"
             whileHover={{ scale: 1.02 }}
           >
-            <span className="font-brand tracking-[0.15em] text-[var(--color-gela-espresso)] transition-all duration-500 group-hover:text-[var(--color-gela-green)] text-2xl md:text-3xl uppercase">
+            <span className={`font-brand tracking-[0.15em] transition-all duration-500 group-hover:text-[var(--color-gela-green)] text-2xl md:text-3xl uppercase ${isLightHeader ? 'text-white' : 'text-[var(--color-gela-espresso)]'}`}>
               GELA
             </span>
             <div className="w-1.5 h-1.5 rounded-full bg-[var(--color-gela-green)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -582,10 +584,10 @@ export default function App() {
                     setTimeout(() => scrollToSection(item.toLowerCase().replace(' ', '-')), 100);
                   }
                 }}
-                className={`text-[13px] uppercase tracking-[0.3em] font-semibold text-[var(--color-gela-espresso)]/80 hover:text-[var(--color-gela-espresso)] transition-all duration-300 relative group whitespace-nowrap ${isRTL ? 'font-arabic tracking-normal text-sm' : ''} ${view === 'story' && item === 'Story' ? 'text-[var(--color-gela-espresso)]' : ''} ${view === 'landing' && item !== 'Story' ? '' : ''}`}
+                className={`text-[13px] uppercase tracking-[0.3em] font-semibold transition-all duration-300 relative group whitespace-nowrap ${isRTL ? 'font-arabic tracking-normal text-sm' : ''} ${isLightHeader ? 'text-white/80 hover:text-white' : 'text-[var(--color-gela-espresso)]/80 hover:text-[var(--color-gela-espresso)]'} ${view === 'story' && item === 'Story' ? (isLightHeader ? '!text-white' : '!text-[var(--color-gela-espresso)]') : ''}`}
               >
                 {t.nav[item.toLowerCase().replace(' ', '') as keyof typeof t.nav]}
-                <span className={`absolute -bottom-2 left-1/2 -translate-x-1/2 h-[1px] bg-[var(--color-gela-espresso)] transition-all duration-500 ${ (view === 'story' && item === 'Story') || (view === 'landing' && item !== 'Story' && false) ? 'w-full' : 'w-0 group-hover:w-full' }`} />
+                <span className={`absolute -bottom-2 left-1/2 -translate-x-1/2 h-[1px] transition-all duration-500 ${isLightHeader ? 'bg-white' : 'bg-[var(--color-gela-espresso)]'} ${ (view === 'story' && item === 'Story') || (view === 'landing' && item !== 'Story' && false) ? 'w-full' : 'w-0 group-hover:w-full' }`} />
               </button>
             ))}
           </div>
@@ -595,7 +597,7 @@ export default function App() {
             {/* Language Switcher - Oman/UK Flag SVGs */}
             <button
               onClick={() => setLang(lang === 'en' ? 'ar' : 'en')}
-              className="flex items-center justify-center border border-[var(--color-gela-espresso)]/20 rounded-full hover:bg-[var(--color-gela-espresso)] hover:text-white transition-all duration-500 w-10 h-10 group overflow-hidden"
+              className={`flex items-center justify-center border rounded-full transition-all duration-500 w-10 h-10 group overflow-hidden ${isLightHeader ? 'border-white/20 hover:bg-white hover:text-black' : 'border-[var(--color-gela-espresso)]/20 hover:bg-[var(--color-gela-espresso)] hover:text-white'}`}
               title={lang === 'en' ? 'Switch to Arabic' : 'Switch to English'}
             >
               <div className="w-6 h-6 rounded-full overflow-hidden flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -623,7 +625,7 @@ export default function App() {
 
             <button 
               onClick={() => scrollToSection('visit-us')}
-              className="hidden sm:flex items-center justify-center border border-[var(--color-gela-espresso)]/20 text-[var(--color-gela-espresso)] rounded-full text-[12px] uppercase tracking-[0.2em] font-bold hover:bg-[var(--color-gela-espresso)] hover:text-white transition-all duration-500 px-6 py-2.5"
+              className={`hidden sm:flex items-center justify-center border rounded-full text-[12px] uppercase tracking-[0.2em] font-bold transition-all duration-500 px-6 py-2.5 ${isLightHeader ? 'border-white/20 text-white hover:bg-white hover:text-black' : 'border-[var(--color-gela-espresso)]/20 text-[var(--color-gela-espresso)] hover:bg-[var(--color-gela-espresso)] hover:text-white'}`}
             >
               {t.nav.order}
             </button>
@@ -635,15 +637,15 @@ export default function App() {
             >
               <motion.span 
                 animate={isMobileMenuOpen ? { rotate: 45, y: 4 } : { rotate: 0, y: 0 }}
-                className="bg-[var(--color-gela-espresso)] rounded-full w-5 h-0.5 transition-all duration-500" 
+                className={`rounded-full w-5 h-0.5 transition-all duration-500 ${isLightHeader ? 'bg-white' : 'bg-[var(--color-gela-espresso)]'}`} 
               />
               <motion.span 
                 animate={isMobileMenuOpen ? { opacity: 0 } : { opacity: 1 }}
-                className="bg-[var(--color-gela-espresso)] rounded-full w-5 h-0.5 transition-all duration-500" 
+                className={`rounded-full w-5 h-0.5 transition-all duration-500 ${isLightHeader ? 'bg-white' : 'bg-[var(--color-gela-espresso)]'}`} 
               />
               <motion.span 
                 animate={isMobileMenuOpen ? { rotate: -45, y: -4 } : { rotate: 0, y: 0 }}
-                className="bg-[var(--color-gela-espresso)] rounded-full w-5 h-0.5 transition-all duration-500" 
+                className={`rounded-full w-5 h-0.5 transition-all duration-500 ${isLightHeader ? 'bg-white' : 'bg-[var(--color-gela-espresso)]'}`} 
               />
             </button>
           </div>
