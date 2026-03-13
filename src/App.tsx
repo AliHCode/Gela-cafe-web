@@ -584,7 +584,7 @@ export default function App() {
                     setTimeout(() => scrollToSection(item.toLowerCase().replace(' ', '-')), 100);
                   }
                 }}
-                className={`text-[13px] uppercase tracking-[0.3em] font-semibold transition-all duration-300 relative group whitespace-nowrap ${isRTL ? 'font-arabic tracking-normal text-3xl' : ''} ${isLightHeader ? 'text-white/80 hover:text-white' : 'text-[var(--color-gela-espresso)]/80 hover:text-[var(--color-gela-espresso)]'} ${view === 'story' && item === 'Story' ? (isLightHeader ? '!text-white' : '!text-[var(--color-gela-espresso)]') : ''}`}
+                className={`transition-all duration-300 relative group whitespace-nowrap font-semibold ${isRTL ? 'font-arabic tracking-normal text-3xl' : 'text-[13px] uppercase tracking-[0.3em]'} ${isLightHeader ? 'text-white/80 hover:text-white' : 'text-[var(--color-gela-espresso)]/80 hover:text-[var(--color-gela-espresso)]'} ${view === 'story' && item === 'Story' ? (isLightHeader ? '!text-white' : '!text-[var(--color-gela-espresso)]') : ''}`}
               >
                 {t.nav[item.toLowerCase().replace(' ', '') as keyof typeof t.nav]}
                 <span className={`absolute -bottom-2 left-1/2 -translate-x-1/2 h-[1px] transition-all duration-500 ${isLightHeader ? 'bg-white' : 'bg-[var(--color-gela-espresso)]'} ${ (view === 'story' && item === 'Story') || (view === 'landing' && item !== 'Story' && false) ? 'w-full' : 'w-0 group-hover:w-full' }`} />
