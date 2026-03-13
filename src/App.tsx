@@ -308,7 +308,7 @@ export default function App() {
             className="group relative flex items-center gap-2 shrink-0 z-10"
             whileHover={{ scale: 1.02 }}
           >
-            <span className="font-brand tracking-[0.15em] text-[var(--color-gela-espresso)] transition-all duration-500 group-hover:text-[var(--color-gela-green)] text-2xl md:text-4xl uppercase">
+            <span className="font-brand tracking-[0.15em] text-[var(--color-gela-espresso)] transition-all duration-500 group-hover:text-[var(--color-gela-green)] text-2xl md:text-3xl uppercase">
               GELA
             </span>
             <div className="w-1.5 h-1.5 rounded-full bg-[var(--color-gela-green)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
