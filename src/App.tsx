@@ -540,8 +540,8 @@ export default function App() {
                 className={`aspect-[3/4] rounded-[40px] overflow-hidden shadow-2xl transition-transform duration-700 ${isRTL ? '-rotate-2 hover:rotate-0' : 'rotate-2 hover:rotate-0'}`}
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1000&auto=format&fit=crop" 
-                  alt="Cafe Atmosphere" 
+                  src="/sanctuary.jpg" 
+                  alt="Gela Sanctuary" 
                   className="w-full h-full object-cover"
                 />
               </motion.div>
@@ -839,7 +839,7 @@ export default function App() {
                 transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
               >
                 <img 
-                  src="/sanctuary.jpg" 
+                  src="/newsanctuary.jpg" 
                   alt="Cafe Interior" 
                   className="w-full h-full object-cover"
                 />
