@@ -99,9 +99,195 @@ const MENU_DATA = {
   ]
 };
 
+const OurStory = ({ isRTL, lang }: { isRTL: boolean, lang: 'en' | 'ar' }) => {
+  const t = {
+    en: {
+      hero: { title1: 'Every Story', title2: 'Starts with', highlight: 'a Dream.' },
+      vision: { label: 'The Vision', title: 'Rooted in Culture,', highlight: 'Brewed with Love.', text: 'Gela was born from a simple yet profound vision: to create a space where the rich traditions of Omani hospitality meet the artistry of modern specialty coffee. It began with a single scoop of authentic gelato and a perfect pour of espresso.' },
+      craft: { label: 'The Craft', title: 'Artistry in', highlight: 'Every Detail.', text: 'From the selection of the finest beans to the delicate balance of our matcha blends, every element at Gela is crafted with intention. We don\'t just serve drinks; we curate experiences.' },
+      community: { label: 'The Soul', title: 'For the', highlight: 'Community.', text: 'You are the heartbeat of Gela. Our sanctuary is defined by the laughter shared over a table, the quiet moments of reflection, and the connections that grow within these walls.' },
+      appreciation: { label: 'Shared Moments', title: 'Your Gela', highlight: 'Stories.', subtitle: 'A post of appreciation to our incredible community.' }
+    },
+    ar: {
+      hero: { title1: 'كل قصة', title2: 'تبدأ بـ', highlight: 'حلم.' },
+      vision: { label: 'الرؤية', title: 'متجذرة في الثقافة،', highlight: 'ومعدة بحب.', text: 'ولدت جيلا من رؤية بسيطة ولكنها عميقة: خلق مساحة حيث تلتقي التقاليد الغنية للضيافة العمانية مع فن القهوة المختصة الحديثة. بدأت بملعقة واحدة من الجيلاتو الأصلي وسكبة مثالية من الإسبريسو.' },
+      craft: { label: 'الحرفة', title: 'الإبداع في', highlight: 'كل تفصيل.', text: 'من اختيار أجود الحبوب إلى التوازن الدقيق لخلطات الماتشا لدينا، يتم صياغة كل عنصر في جيلا بعناية. نحن لا نقدم المشروبات فحسب؛ نحن ننظم التجارب.' },
+      community: { label: 'الروح', title: 'من أجل', highlight: 'المجتمع.', text: 'أنتم نبض قلب جيلا. يتم تعريف ملاذنا من خلال الضحكات المشتركة على الطاولة، ولحظات التأمل الهادئة، والروابط التي تنمو داخل هذه الجدران.' },
+      appreciation: { label: 'لحظات مشتركة', title: 'قصص', highlight: 'جيلا.', subtitle: 'منشور تقدير لمجتمعنا الرائع.' }
+    }
+  }[lang];
+
+  return (
+    <div className="bg-[var(--color-gela-cream)] min-h-screen overflow-hidden">
+      {/* Cinematic Hero */}
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <video 
+          autoPlay 
+          muted 
+          loop 
+          playsInline 
+          className="absolute inset-0 w-full h-full object-cover scale-110 blur-[2px] brightness-[0.7]"
+        >
+          <source src="/ourstory/story1 (7).mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1a3626]/40 via-transparent to-[var(--color-gela-cream)]" />
+        
+        <div className="relative z-10 text-center px-6">
+          <motion.span 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className={`text-[10px] uppercase tracking-[0.5em] text-white/70 font-bold mb-6 block ${isRTL ? 'font-arabic tracking-normal' : ''}`}
+          >
+            EST. 2024
+          </motion.span>
+          <motion.h1 
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+            className={`font-heading text-6xl md:text-8xl lg:text-9xl text-white leading-[0.8] tracking-tighter ${isRTL ? 'font-arabic leading-tight' : ''}`}
+          >
+            {t.hero.title1} <br/>
+            <span className="font-light italic opacity-50">{t.hero.title2}</span> <br/>
+            <span className="text-[var(--color-gela-green)]">{t.hero.highlight}</span>
+          </motion.h1>
+        </div>
+      </section>
+
+      {/* The Vision Section */}
+      <section className="py-32 relative">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: isRTL ? 50 : -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              className="relative"
+            >
+              <div className="aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl relative group">
+                <img src="/ourstory/story1 (2).jpg" alt="Interior Details" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-gela-green)]/40 to-transparent opacity-60" />
+              </div>
+              {/* Floating Ornament */}
+              <div className={`absolute -bottom-10 -right-10 w-40 h-40 bg-[var(--color-gela-green)] rounded-full -z-10 blur-3xl opacity-20`} />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: isRTL ? -50 : 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              className="max-w-xl"
+            >
+              <span className={`text-[10px] uppercase tracking-[0.4em] text-[var(--color-gela-green)] font-bold mb-6 block ${isRTL ? 'font-arabic tracking-normal' : ''}`}>{t.vision.label}</span>
+              <h2 className={`font-heading text-5xl md:text-7xl text-[var(--color-gela-espresso)] leading-[0.9] tracking-tighter mb-8 ${isRTL ? 'font-arabic leading-tight' : ''}`}>
+                {t.vision.title} <br/>
+                <span className="italic font-light text-[var(--color-gela-green)]">{t.vision.highlight}</span>
+              </h2>
+              <p className={`text-xl md:text-2xl font-light leading-relaxed text-[var(--color-gela-espresso)]/70 ${isRTL ? 'font-arabic' : ''}`}>
+                {t.vision.text}
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Craft - Full Width Background Video Section */}
+      <section className="relative py-48 overflow-hidden bg-[var(--color-gela-espresso)]">
+        <video 
+          autoPlay 
+          muted 
+          loop 
+          playsInline 
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
+        >
+          <source src="/ourstory/story1 (3).mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-gela-espresso)] via-[var(--color-gela-espresso)]/80 to-transparent" />
+        
+        <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="max-w-2xl"
+          >
+            <span className={`text-[10px] uppercase tracking-[0.4em] text-[var(--color-gela-cream)]/60 font-bold mb-6 block ${isRTL ? 'font-arabic tracking-normal' : ''}`}>{t.craft.label}</span>
+            <h2 className={`font-heading text-5xl md:text-7xl text-[var(--color-gela-cream)] leading-[0.9] tracking-tighter mb-8 ${isRTL ? 'font-arabic leading-tight' : ''}`}>
+              {t.craft.title} <br/>
+              <span className="italic font-light text-[var(--color-gela-green)]">{t.craft.highlight}</span>
+            </h2>
+            <p className={`text-xl md:text-2xl font-light leading-relaxed text-[var(--color-gela-cream)]/70 ${isRTL ? 'font-arabic' : ''}`}>
+              {t.craft.text}
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Appreciation Post Gallery */}
+      <section className="py-32 bg-[var(--color-gela-cream)]">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 mb-20">
+          <div className="text-center max-w-3xl mx-auto">
+            <motion.span 
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className={`text-[10px] uppercase tracking-[0.4em] text-[var(--color-gela-green)] font-bold mb-6 block ${isRTL ? 'font-arabic tracking-normal' : ''}`}
+            >
+              {t.appreciation.label}
+            </motion.span>
+            <h2 className={`font-heading text-5xl md:text-8xl text-[var(--color-gela-espresso)] leading-[0.85] tracking-tighter mb-8 ${isRTL ? 'font-arabic leading-tight' : ''}`}>
+              {t.appreciation.title} <span className="italic font-light text-[var(--color-gela-green)]">{t.appreciation.highlight}</span>
+            </h2>
+            <p className={`text-xl font-light text-[var(--color-gela-espresso)]/50 ${isRTL ? 'font-arabic' : ''}`}>
+              {t.appreciation.subtitle}
+            </p>
+          </div>
+        </div>
+
+        {/* Masonry-style Grid for Appreciation */}
+        <div className="px-4">
+          <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+            {[10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27].map((num) => (
+              <motion.div
+                key={num}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: (num % 5) * 0.1 }}
+                className="relative overflow-hidden rounded-[20px] md:rounded-[32px] group"
+              >
+                <img 
+                  src={`/ourstory/story1 (${num}).jpg`} 
+                  alt="Guest Story" 
+                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+              </motion.div>
+            ))}
+            
+            {/* Inject a few Videos for dynamic feel */}
+            {[4, 5, 8].map((num) => (
+              <motion.div
+                key={`vid-${num}`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                className="relative overflow-hidden rounded-[32px] aspect-[9/16]"
+              >
+                <video 
+                  autoPlay 
+                  muted 
+                  loop 
+                  playsInline 
+                  className="w-full h-full object-cover"
+                >
+                  <source src={`/ourstory/story1 (${num}).mp4`} type="video/mp4" />
+                </video>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
 const TRANSLATIONS = {
   en: {
-    nav: { about: 'About', menu: 'Menu', visitus: 'Visit Us', careers: 'Careers', order: 'Order Now' },
+    nav: { about: 'About', menu: 'Menu', story: 'Our Story', visitus: 'Visit Us', careers: 'Careers', order: 'Order Now' },
     hero: { title: 'Sip. Savor.', stay: 'Stay.', desc: 'Experience the perfect blend of artisanal coffee, premium matcha, and authentic gelato.', button: 'View Menu', scroll: 'Scroll' },
     about: {
       ch1: { label: 'The Beginning', title: 'A space to', highlight: 'Breathe.', text: 'Located in the heart of Mashael Alnour, Sohar, Gela Cafe was born from a simple desire: to create a sanctuary from the everyday hustle.' },
@@ -133,7 +319,7 @@ const TRANSLATIONS = {
     }
   },
   ar: {
-    nav: { about: 'من نحن', menu: 'القائمة', visitus: 'زورونا', careers: 'الوظائف', order: 'اطلب الآن' },
+    nav: { about: 'من نحن', menu: 'القائمة', story: 'قصتنا', visitus: 'زورونا', careers: 'الوظائف', order: 'اطلب الآن' },
     hero: { title: 'رشفة. تذوق.', stay: 'استرخِ.', desc: 'استمتع بالمزيج المثالي من القهوة المختصة، الماتشا الفاخرة، والجيلاتو الأصيل.', button: 'عرض القائمة', scroll: 'مرر للأسفل' },
     about: {
       ch1: { label: 'البداية', title: 'مساحة لـ', highlight: 'التنفس.', text: 'يقع جيلا كافيه في قلب مشاعل النور، صحار، وقد وُلد من رغبة بسيطة: خلق ملاذ من صخب الحياة اليومية.' },
@@ -173,6 +359,7 @@ export default function App() {
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [view, setView] = useState<'landing' | 'story'>('landing');
   const [activeMenuCategory, setActiveMenuCategory] = useState(MENU_CATEGORIES[0].id);
   const [hoveredItemIndex, setHoveredItemIndex] = useState(0);
   const [gyroPermission, setGyroPermission] = useState<"default" | "granted" | "denied">("default");
@@ -304,7 +491,10 @@ export default function App() {
           
           {/* Logo */}
           <motion.button 
-            onClick={() => scrollToSection('hero')}
+            onClick={() => {
+              setView('landing');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
             className="group relative flex items-center gap-2 shrink-0 z-10"
             whileHover={{ scale: 1.02 }}
           >
@@ -316,14 +506,22 @@ export default function App() {
 
           {/* Desktop Navigation - Centered */}
           <div className="hidden md:flex items-center absolute left-1/2 -translate-x-1/2 space-x-12">
-            {['About', 'Menu', 'Visit Us'].map((item) => (
+            {['About', 'Menu', 'Story', 'Visit Us'].map((item) => (
               <button
                 key={item}
-                onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
-                className={`text-[13px] uppercase tracking-[0.3em] font-semibold text-[var(--color-gela-espresso)]/80 hover:text-[var(--color-gela-espresso)] transition-all duration-300 relative group whitespace-nowrap ${isRTL ? 'font-arabic tracking-normal text-sm' : ''}`}
+                onClick={() => {
+                  if (item === 'Story') {
+                    setView('story');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  } else {
+                    setView('landing');
+                    setTimeout(() => scrollToSection(item.toLowerCase().replace(' ', '-')), 100);
+                  }
+                }}
+                className={`text-[13px] uppercase tracking-[0.3em] font-semibold text-[var(--color-gela-espresso)]/80 hover:text-[var(--color-gela-espresso)] transition-all duration-300 relative group whitespace-nowrap ${isRTL ? 'font-arabic tracking-normal text-sm' : ''} ${view === 'story' && item === 'Story' ? 'text-[var(--color-gela-espresso)]' : ''} ${view === 'landing' && item !== 'Story' ? '' : ''}`}
               >
                 {t.nav[item.toLowerCase().replace(' ', '') as keyof typeof t.nav]}
-                <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-[1px] bg-[var(--color-gela-espresso)] transition-all duration-500 group-hover:w-full" />
+                <span className={`absolute -bottom-2 left-1/2 -translate-x-1/2 h-[1px] bg-[var(--color-gela-espresso)] transition-all duration-500 ${ (view === 'story' && item === 'Story') || (view === 'landing' && item !== 'Story' && false) ? 'w-full' : 'w-0 group-hover:w-full' }`} />
               </button>
             ))}
           </div>
@@ -404,17 +602,26 @@ export default function App() {
               </button>
             </div>
             
-            <div className="flex-1 flex flex-col items-center justify-center space-y-12">
-              {['About', 'Menu', 'Visit Us'].map((item, idx) => (
+            <div className="flex-1 flex flex-col items-center justify-center space-y-10 px-8">
+              {['About', 'Menu', 'Story', 'Visit Us'].map((item, idx) => (
                 <motion.button
                   key={item}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: idx * 0.1 }}
-                  onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
-                  className="text-4xl font-heading tracking-tighter text-[var(--color-gela-espresso)] hover:text-[var(--color-gela-green)] transition-colors"
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    if (item === 'Story') {
+                      setView('story');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    } else {
+                      setView('landing');
+                      setTimeout(() => scrollToSection(item.toLowerCase().replace(' ', '-')), 300);
+                    }
+                  }}
+                  className={`text-6xl font-heading tracking-tighter hover:italic transition-all duration-500 text-center ${isRTL ? 'font-arabic' : ''}`}
                 >
-                  {item}
+                  {t.nav[item.toLowerCase().replace(' ', '') as keyof typeof t.nav]}
                 </motion.button>
               ))}
             </div>
@@ -431,7 +638,16 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      {/* Interactive Hero Section */}
+      <AnimatePresence mode="wait">
+        {view === 'landing' ? (
+          <motion.main
+            key="landing"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            {/* Interactive Hero Section */}
       <section 
         id="hero" 
         className="relative h-screen flex items-center justify-center overflow-hidden bg-[var(--color-gela-cream)]"
@@ -964,6 +1180,20 @@ export default function App() {
         </div>
       </section>
 
+          </motion.main>
+        ) : (
+          <motion.div
+            key="story"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <OurStory isRTL={isRTL} lang={lang} />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Redesigned Aesthetic Footer */}
       <footer className="relative bg-[var(--color-gela-green)] text-[var(--color-gela-cream)] pt-32 pb-12 overflow-hidden">
 
@@ -1011,10 +1241,18 @@ export default function App() {
               >
                 <h4 className={`text-[10px] uppercase tracking-[0.3em] font-bold text-white mb-8 ${isRTL ? 'font-arabic tracking-normal' : ''}`}>{t.footer.nav}</h4>
                 <ul className="space-y-4">
-                  {['About', 'Menu', 'Visit Us', 'Careers'].map((item) => (
+                  {['About', 'Menu', 'Story', 'Visit Us', 'Careers'].map((item) => (
                     <li key={item}>
                       <button 
-                        onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
+                        onClick={() => {
+                          if (item === 'Story') {
+                            setView('story');
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                          } else {
+                            setView('landing');
+                            setTimeout(() => scrollToSection(item.toLowerCase().replace(' ', '-')), 100);
+                          }
+                        }}
                         className={`text-lg font-light text-[var(--color-gela-cream)]/60 hover:text-[var(--color-gela-cream)] transition-colors relative group ${isRTL ? 'font-arabic' : ''}`}
                       >
                         {t.nav[item.toLowerCase().replace(' ', '') as keyof typeof t.nav]}
