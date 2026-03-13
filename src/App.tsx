@@ -625,7 +625,7 @@ export default function App() {
 
             <button 
               onClick={() => scrollToSection('visit-us')}
-              className={`hidden sm:flex items-center justify-center border rounded-full uppercase tracking-[0.2em] font-bold transition-all duration-500 px-6 py-2.5 ${isRTL ? 'font-arabic text-xl tracking-normal' : 'text-[12px]'} ${isLightHeader ? 'border-white/20 text-white hover:bg-white hover:text-black' : 'border-[var(--color-gela-espresso)]/20 text-[var(--color-gela-espresso)] hover:bg-[var(--color-gela-espresso)] hover:text-white'}`}
+              className={`hidden sm:flex items-center justify-center border rounded-full uppercase tracking-[0.2em] font-bold transition-all duration-500 px-6 py-2.5 ${isRTL ? 'font-arabic text-lg tracking-normal' : 'text-[12px]'} ${isLightHeader ? 'border-white/20 text-white hover:bg-white hover:text-black' : 'border-[var(--color-gela-espresso)]/20 text-[var(--color-gela-espresso)] hover:bg-[var(--color-gela-espresso)] hover:text-white'}`}
             >
               {t.nav.order}
             </button>
