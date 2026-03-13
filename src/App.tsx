@@ -308,7 +308,7 @@ export default function App() {
             className="group relative flex items-center gap-2 shrink-0 z-10"
             whileHover={{ scale: 1.02 }}
           >
-            <span className="font-brand tracking-[0.15em] text-[var(--color-gela-espresso)] transition-all duration-500 group-hover:text-[var(--color-gela-green)] text-xl md:text-2xl uppercase">
+            <span className="font-brand tracking-[0.15em] text-[var(--color-gela-espresso)] transition-all duration-500 group-hover:text-[var(--color-gela-green)] text-2xl md:text-4xl uppercase">
               GELA
             </span>
             <div className="w-1.5 h-1.5 rounded-full bg-[var(--color-gela-green)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -398,7 +398,7 @@ export default function App() {
             className="fixed inset-0 z-[60] bg-[var(--color-gela-cream)] flex flex-col"
           >
             <div className="flex justify-between items-center p-8">
-              <span className="font-brand text-2xl tracking-[0.15em] uppercase">GELA</span>
+              <span className="font-brand text-3xl tracking-[0.15em] uppercase">GELA</span>
               <button onClick={() => setIsMobileMenuOpen(false)}>
                 <X className="w-8 h-8" />
               </button>
