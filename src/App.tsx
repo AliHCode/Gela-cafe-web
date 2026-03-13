@@ -584,7 +584,7 @@ export default function App() {
                     setTimeout(() => scrollToSection(item.toLowerCase().replace(' ', '-')), 100);
                   }
                 }}
-                className={`text-[13px] uppercase tracking-[0.3em] font-semibold transition-all duration-300 relative group whitespace-nowrap ${isRTL ? 'font-arabic tracking-normal text-xl' : ''} ${isLightHeader ? 'text-white/80 hover:text-white' : 'text-[var(--color-gela-espresso)]/80 hover:text-[var(--color-gela-espresso)]'} ${view === 'story' && item === 'Story' ? (isLightHeader ? '!text-white' : '!text-[var(--color-gela-espresso)]') : ''}`}
+                className={`text-[13px] uppercase tracking-[0.3em] font-semibold transition-all duration-300 relative group whitespace-nowrap ${isRTL ? 'font-arabic tracking-normal text-2xl' : ''} ${isLightHeader ? 'text-white/80 hover:text-white' : 'text-[var(--color-gela-espresso)]/80 hover:text-[var(--color-gela-espresso)]'} ${view === 'story' && item === 'Story' ? (isLightHeader ? '!text-white' : '!text-[var(--color-gela-espresso)]') : ''}`}
               >
                 {t.nav[item.toLowerCase().replace(' ', '') as keyof typeof t.nav]}
                 <span className={`absolute -bottom-2 left-1/2 -translate-x-1/2 h-[1px] transition-all duration-500 ${isLightHeader ? 'bg-white' : 'bg-[var(--color-gela-espresso)]'} ${ (view === 'story' && item === 'Story') || (view === 'landing' && item !== 'Story' && false) ? 'w-full' : 'w-0 group-hover:w-full' }`} />
@@ -625,7 +625,7 @@ export default function App() {
 
             <button 
               onClick={() => scrollToSection('visit-us')}
-              className={`hidden sm:flex items-center justify-center border rounded-full uppercase tracking-[0.2em] font-bold transition-all duration-500 px-6 py-2.5 ${isRTL ? 'font-arabic text-lg tracking-normal' : 'text-[12px]'} ${isLightHeader ? 'border-white/20 text-white hover:bg-white hover:text-black' : 'border-[var(--color-gela-espresso)]/20 text-[var(--color-gela-espresso)] hover:bg-[var(--color-gela-espresso)] hover:text-white'}`}
+              className={`hidden sm:flex items-center justify-center border rounded-full uppercase tracking-[0.2em] font-bold transition-all duration-500 px-6 py-2.5 ${isRTL ? 'font-arabic text-xl tracking-normal' : 'text-[12px]'} ${isLightHeader ? 'border-white/20 text-white hover:bg-white hover:text-black' : 'border-[var(--color-gela-espresso)]/20 text-[var(--color-gela-espresso)] hover:bg-[var(--color-gela-espresso)] hover:text-white'}`}
             >
               {t.nav.order}
             </button>
