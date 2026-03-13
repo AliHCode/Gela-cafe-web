@@ -584,7 +584,7 @@ export default function App() {
                     setTimeout(() => scrollToSection(item.toLowerCase().replace(' ', '-')), 100);
                   }
                 }}
-                className={`transition-all duration-300 relative group whitespace-nowrap font-semibold ${isRTL ? 'font-arabic tracking-normal text-3xl' : 'text-[13px] uppercase tracking-[0.3em]'} ${isLightHeader ? 'text-white/80 hover:text-white' : 'text-[var(--color-gela-espresso)]/80 hover:text-[var(--color-gela-espresso)]'} ${view === 'story' && item === 'Story' ? (isLightHeader ? '!text-white' : '!text-[var(--color-gela-espresso)]') : ''}`}
+                className={`transition-all duration-300 relative group whitespace-nowrap font-semibold ${isRTL ? 'font-arabic tracking-normal text-xl' : 'text-[13px] uppercase tracking-[0.3em]'} ${isLightHeader ? 'text-white/80 hover:text-white' : 'text-[var(--color-gela-espresso)]/80 hover:text-[var(--color-gela-espresso)]'} ${view === 'story' && item === 'Story' ? (isLightHeader ? '!text-white' : '!text-[var(--color-gela-espresso)]') : ''}`}
               >
                 {t.nav[item.toLowerCase().replace(' ', '') as keyof typeof t.nav]}
                 <span className={`absolute -bottom-2 left-1/2 -translate-x-1/2 h-[1px] transition-all duration-500 ${isLightHeader ? 'bg-white' : 'bg-[var(--color-gela-espresso)]'} ${ (view === 'story' && item === 'Story') || (view === 'landing' && item !== 'Story' && false) ? 'w-full' : 'w-0 group-hover:w-full' }`} />
@@ -1307,7 +1307,7 @@ export default function App() {
               >
                 <h4 className={`text-[10px] uppercase tracking-[0.3em] font-bold text-white mb-8 ${isRTL ? 'font-arabic tracking-normal' : ''}`}>{t.footer.nav}</h4>
                 <ul className="space-y-4">
-                  {['About', 'Menu', 'Story', 'Visit Us', 'Careers'].map((item) => (
+                  {['About', 'Menu', 'Story', 'Visit Us'].map((item) => (
                     <li key={item}>
                       <button 
                         onClick={() => {
