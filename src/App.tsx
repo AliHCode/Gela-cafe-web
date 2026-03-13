@@ -548,7 +548,9 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[var(--color-gela-cream)] font-sans text-[var(--color-gela-espresso)] selection:bg-[var(--color-gela-green)] selection:text-[var(--color-gela-cream)]">
       {/* Header / Navigation - Full Width Iconic */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-700 py-2 md:py-3 ${
+      <nav 
+        dir="ltr"
+        className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-700 py-2 md:py-3 ${
         isScrolled 
           ? 'bg-[var(--color-gela-cream)]/90 backdrop-blur-md border-b border-[var(--color-gela-espresso)]/5' 
           : 'bg-transparent border-b border-transparent'
@@ -685,7 +687,7 @@ export default function App() {
                       setTimeout(() => scrollToSection(item.toLowerCase().replace(' ', '-')), 300);
                     }
                   }}
-                  className={`text-6xl font-heading tracking-tighter hover:italic transition-all duration-500 text-center ${isRTL ? 'font-arabic' : ''}`}
+                  className={`text-4xl font-heading tracking-tighter hover:italic transition-all duration-500 text-center ${isRTL ? 'font-arabic' : ''}`}
                 >
                   {t.nav[item.toLowerCase().replace(' ', '') as keyof typeof t.nav]}
                 </motion.button>
@@ -1230,7 +1232,7 @@ export default function App() {
                   </div>
                 </div>
 
-                <div className="flex gap-4">
+                <div className="flex flex-col sm:flex-row gap-4">
                   <a 
                     href="https://wa.me/96876618357"
                     target="_blank"
@@ -1239,6 +1241,15 @@ export default function App() {
                   >
                     {t.visit.contact.cta}
                   </a>
+                  <button 
+                    onClick={() => {
+                      setView('story');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    className={`px-8 py-4 border border-[var(--color-gela-espresso)]/20 text-[var(--color-gela-espresso)] rounded-full text-[10px] uppercase tracking-widest font-bold hover:bg-[var(--color-gela-espresso)] hover:text-white transition-all duration-500 ${isRTL ? 'font-arabic tracking-normal' : ''}`}
+                  >
+                    {isRTL ? 'قصتنا' : 'Our Story'}
+                  </button>
                 </div>
               </motion.div>
             </div>
