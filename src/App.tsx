@@ -103,17 +103,19 @@ const OurStory = ({ isRTL, lang }: { isRTL: boolean, lang: 'en' | 'ar' }) => {
   const t = {
     en: {
       hero: { title1: 'Every Story', title2: 'Starts with', highlight: 'a Dream.' },
-      vision: { label: 'The Vision', title: 'Rooted in Culture,', highlight: 'Brewed with Love.', text: 'Gela was born from a simple yet profound vision: to create a space where the rich traditions of Omani hospitality meet the artistry of modern specialty coffee. It began with a single scoop of authentic gelato and a perfect pour of espresso.' },
-      craft: { label: 'The Craft', title: 'Artistry in', highlight: 'Every Detail.', text: 'From the selection of the finest beans to the delicate balance of our matcha blends, every element at Gela is crafted with intention. We don\'t just serve drinks; we curate experiences.' },
-      community: { label: 'The Soul', title: 'For the', highlight: 'Community.', text: 'You are the heartbeat of Gela. Our sanctuary is defined by the laughter shared over a table, the quiet moments of reflection, and the connections that grow within these walls.' },
-      appreciation: { label: 'Shared Moments', title: 'Your Gela', highlight: 'Stories.', subtitle: 'A post of appreciation to our incredible community.' }
+      beginning: { label: 'The Beginning', title: 'A Space to', highlight: 'Breathe.', text: 'Gela was born from a simple yet profound vision: to create a space where the rich traditions of Omani hospitality meet the artistry of modern specialty coffee. It began with a single scoop of authentic gelato and a perfect pour of espresso.' },
+      vision: { label: 'The Vision', title: 'Crafted with', highlight: 'Intention.', text: 'Our journey is defined by the pursuit of excellence. From the selection of the finest beans to our signature matcha blends, every detail is a testament to our dedication to the craft.' },
+      sanctuary: { label: 'The Sanctuary', title: 'Your Daily', highlight: 'Escape.', text: 'We designed Gela to be more than a cafe. It is a sanctuary—a place to disconnect from the noise and reconnect with yourself and your community.' },
+      soul: { label: 'The Soul', title: 'The Gela', highlight: 'Family.', text: 'You are the heartbeat of Gela. Our story is written by the laughter shared, the connections made, and the moments you\'ve spent within these walls.' },
+      appreciation: { label: 'Guest Stories', title: 'Shared', highlight: 'Moments.', subtitle: 'A post of appreciation to our incredible community.' }
     },
     ar: {
       hero: { title1: 'كل قصة', title2: 'تبدأ بـ', highlight: 'حلم.' },
-      vision: { label: 'الرؤية', title: 'متجذرة في الثقافة،', highlight: 'ومعدة بحب.', text: 'ولدت جيلا من رؤية بسيطة ولكنها عميقة: خلق مساحة حيث تلتقي التقاليد الغنية للضيافة العمانية مع فن القهوة المختصة الحديثة. بدأت بملعقة واحدة من الجيلاتو الأصلي وسكبة مثالية من الإسبريسو.' },
-      craft: { label: 'الحرفة', title: 'الإبداع في', highlight: 'كل تفصيل.', text: 'من اختيار أجود الحبوب إلى التوازن الدقيق لخلطات الماتشا لدينا، يتم صياغة كل عنصر في جيلا بعناية. نحن لا نقدم المشروبات فحسب؛ نحن ننظم التجارب.' },
-      community: { label: 'الروح', title: 'من أجل', highlight: 'المجتمع.', text: 'أنتم نبض قلب جيلا. يتم تعريف ملاذنا من خلال الضحكات المشتركة على الطاولة، ولحظات التأمل الهادئة، والروابط التي تنمو داخل هذه الجدران.' },
-      appreciation: { label: 'لحظات مشتركة', title: 'قصص', highlight: 'جيلا.', subtitle: 'منشور تقدير لمجتمعنا الرائع.' }
+      beginning: { label: 'البداية', title: 'مساحة لـ', highlight: 'التنفس.', text: 'ولدت جيلا من رؤية بسيطة ولكنها عميقة: خلق مساحة حيث تلتقي التقاليد الغنية للضيافة العمانية مع فن القهوة المختصة الحديثة. بدأت بملعقة واحدة من الجيلاتو الأصلي وسكبة مثالية من الإسبريسو.' },
+      vision: { label: 'الرؤية', title: 'صيغت بـ', highlight: 'إتقان.', text: 'تتميز رحلتنا بالسعي وراء التميز. من اختيار أجود الحبوب إلى خلطات الماتشا المميزة لدينا، كل تفصيل هو شهادة على تفانينا في الحرفة.' },
+      sanctuary: { label: 'الملاذ', title: 'هروبك', highlight: 'اليومي.', text: 'لقد صممنا جيلا لتكون أكثر من مجرد مقهى. إنها ملاذ - مكان للانفصال عن الضجيج وإعادة الاتصال مع نفسك ومجتمعك.' },
+      soul: { label: 'الروح', title: 'عائلة', highlight: 'جيلا.', text: 'أنتم نبض قلب جيلا. تُكتب قصتنا من خلال الضحكات المشتركة، والروابط التي تم بناؤها، واللحظات التي قضيتها داخل هذه الجدران.' },
+      appreciation: { label: 'قصص الضيوف', title: 'لحظات', highlight: 'مشتركة.', subtitle: 'منشور تقدير لمجتمعنا الرائع.' }
     }
   }[lang];
 
@@ -153,8 +155,8 @@ const OurStory = ({ isRTL, lang }: { isRTL: boolean, lang: 'en' | 'ar' }) => {
         </div>
       </section>
 
-      {/* The Vision Section */}
-      <section className="py-32 relative">
+      {/* Chapter 1: The Beginning */}
+      <section className="py-32 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <motion.div
@@ -162,12 +164,12 @@ const OurStory = ({ isRTL, lang }: { isRTL: boolean, lang: 'en' | 'ar' }) => {
               whileInView={{ opacity: 1, x: 0 }}
               className="relative"
             >
-              <div className="aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl relative group">
-                <img src="/ourstory/story1 (2).jpg" alt="Interior Details" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-gela-green)]/40 to-transparent opacity-60" />
+              <div className="aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl">
+                <video autoPlay muted loop playsInline className="w-full h-full object-cover">
+                  <source src="/ourstory/story1 (9).mp4" type="video/mp4" />
+                </video>
               </div>
-              {/* Floating Ornament */}
-              <div className={`absolute -bottom-10 -right-10 w-40 h-40 bg-[var(--color-gela-green)] rounded-full -z-10 blur-3xl opacity-20`} />
+              <div className="absolute -top-10 -left-10 w-40 h-40 bg-[var(--color-gela-green)]/10 rounded-full blur-3xl -z-10" />
             </motion.div>
 
             <motion.div
@@ -175,105 +177,167 @@ const OurStory = ({ isRTL, lang }: { isRTL: boolean, lang: 'en' | 'ar' }) => {
               whileInView={{ opacity: 1, x: 0 }}
               className="max-w-xl"
             >
-              <span className={`text-[10px] uppercase tracking-[0.4em] text-[var(--color-gela-green)] font-bold mb-6 block ${isRTL ? 'font-arabic tracking-normal' : ''}`}>{t.vision.label}</span>
+              <span className={`text-[10px] uppercase tracking-[0.4em] text-[var(--color-gela-green)] font-bold mb-6 block ${isRTL ? 'font-arabic tracking-normal' : ''}`}>{t.beginning.label}</span>
               <h2 className={`font-heading text-5xl md:text-7xl text-[var(--color-gela-espresso)] leading-[0.9] tracking-tighter mb-8 ${isRTL ? 'font-arabic leading-tight' : ''}`}>
-                {t.vision.title} <br/>
-                <span className="italic font-light text-[var(--color-gela-green)]">{t.vision.highlight}</span>
+                {t.beginning.title} <br/>
+                <span className="italic font-light text-[var(--color-gela-green)]">{t.beginning.highlight}</span>
               </h2>
               <p className={`text-xl md:text-2xl font-light leading-relaxed text-[var(--color-gela-espresso)]/70 ${isRTL ? 'font-arabic' : ''}`}>
-                {t.vision.text}
+                {t.beginning.text}
               </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* The Craft - Full Width Background Video Section */}
-      <section className="relative py-48 overflow-hidden bg-[var(--color-gela-espresso)]">
-        <video 
-          autoPlay 
-          muted 
-          loop 
-          playsInline 
-          className="absolute inset-0 w-full h-full object-cover opacity-30"
-        >
+      {/* Chapter 2: The Vision - Multi Image Grid */}
+      <section className="py-32 bg-[var(--color-gela-espresso)] text-[var(--color-gela-cream)]">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="lg:col-span-12 mb-16 text-center">
+              <span className={`text-[10px] uppercase tracking-[0.4em] text-[var(--color-gela-green)] font-bold mb-6 block ${isRTL ? 'font-arabic tracking-normal' : ''}`}>{t.vision.label}</span>
+              <h2 className={`font-heading text-5xl md:text-8xl leading-[0.8] tracking-tighter ${isRTL ? 'font-arabic leading-tight' : ''}`}>
+                {t.vision.title} <br/>
+                <span className="italic font-light text-[var(--color-gela-green)]">{t.vision.highlight}</span>
+              </h2>
+            </div>
+            
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="lg:col-span-5 aspect-[3/4] rounded-[40px] overflow-hidden"
+            >
+              <img src="/ourstory/story1 (1).jpg" alt="Process" className="w-full h-full object-cover" />
+            </motion.div>
+            
+            <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6 h-full">
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                className="aspect-square rounded-[32px] overflow-hidden"
+              >
+                <img src="/ourstory/story1 (2).jpg" alt="Detail" className="w-full h-full object-cover" />
+              </motion.div>
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.1 }}
+                className="aspect-square rounded-[32px] overflow-hidden"
+              >
+                <img src="/ourstory/story1 (3).jpg" alt="Aura" className="w-full h-full object-cover" />
+              </motion.div>
+              <div className="md:col-span-2">
+                <p className={`text-2xl font-light leading-relaxed text-[var(--color-gela-cream)]/70 ${isRTL ? 'font-arabic' : ''}`}>
+                  {t.vision.text}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Chapter 3: The Sanctuary - Full Width Video */}
+      <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
+        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover brightness-[0.6]">
           <source src="/ourstory/story1 (3).mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-gela-espresso)] via-[var(--color-gela-espresso)]/80 to-transparent" />
-        
-        <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="max-w-2xl"
-          >
-            <span className={`text-[10px] uppercase tracking-[0.4em] text-[var(--color-gela-cream)]/60 font-bold mb-6 block ${isRTL ? 'font-arabic tracking-normal' : ''}`}>{t.craft.label}</span>
-            <h2 className={`font-heading text-5xl md:text-7xl text-[var(--color-gela-cream)] leading-[0.9] tracking-tighter mb-8 ${isRTL ? 'font-arabic leading-tight' : ''}`}>
-              {t.craft.title} <br/>
-              <span className="italic font-light text-[var(--color-gela-green)]">{t.craft.highlight}</span>
-            </h2>
-            <p className={`text-xl md:text-2xl font-light leading-relaxed text-[var(--color-gela-cream)]/70 ${isRTL ? 'font-arabic' : ''}`}>
-              {t.craft.text}
-            </p>
-          </motion.div>
+        <div className="relative z-10 text-center max-w-4xl px-6">
+          <span className={`text-[10px] uppercase tracking-[0.4em] text-[var(--color-gela-green)] font-bold mb-6 block ${isRTL ? 'font-arabic tracking-normal' : ''}`}>{t.sanctuary.label}</span>
+          <h2 className={`font-heading text-6xl md:text-9xl text-white leading-[0.8] tracking-tighter mb-8 ${isRTL ? 'font-arabic leading-tight' : ''}`}>
+            {t.sanctuary.title} <br/>
+            <span className="italic font-light opacity-60">{t.sanctuary.highlight}</span>
+          </h2>
+          <p className={`text-xl md:text-3xl font-light text-white/80 leading-relaxed ${isRTL ? 'font-arabic' : ''}`}>
+            {t.sanctuary.text}
+          </p>
+        </div>
+      </section>
+
+      {/* Chapter 4: The Soul - Family/Community */}
+      <section className="py-32 relative">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: isRTL ? -50 : 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              className="lg:order-2"
+            >
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-4">
+                  <div className="aspect-[3/4] rounded-[24px] overflow-hidden">
+                    <img src="/ourstory/story1 (4).jpg" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="aspect-square rounded-[24px] overflow-hidden">
+                    <img src="/ourstory/story1 (6).jpg" className="w-full h-full object-cover" />
+                  </div>
+                </div>
+                <div className="pt-12">
+                  <div className="aspect-[3/4] rounded-[24px] overflow-hidden shadow-2xl">
+                    <img src="/ourstory/story1 (5).jpg" className="w-full h-full object-cover" />
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: isRTL ? 50 : -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              className="lg:order-1 max-w-xl"
+            >
+              <span className={`text-[10px] uppercase tracking-[0.4em] text-[var(--color-gela-green)] font-bold mb-6 block ${isRTL ? 'font-arabic tracking-normal' : ''}`}>{t.soul.label}</span>
+              <h2 className={`font-heading text-5xl md:text-7xl text-[var(--color-gela-espresso)] leading-[0.9] tracking-tighter mb-8 ${isRTL ? 'font-arabic leading-tight' : ''}`}>
+                {t.soul.title} <br/>
+                <span className="italic font-light text-[var(--color-gela-green)]">{t.soul.highlight}</span>
+              </h2>
+              <p className={`text-xl md:text-2xl font-light leading-relaxed text-[var(--color-gela-espresso)]/70 ${isRTL ? 'font-arabic' : ''}`}>
+                {t.soul.text}
+              </p>
+            </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Appreciation Post Gallery */}
-      <section className="py-32 bg-[var(--color-gela-cream)]">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 mb-20">
-          <div className="text-center max-w-3xl mx-auto">
-            <motion.span 
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              className={`text-[10px] uppercase tracking-[0.4em] text-[var(--color-gela-green)] font-bold mb-6 block ${isRTL ? 'font-arabic tracking-normal' : ''}`}
-            >
-              {t.appreciation.label}
-            </motion.span>
-            <h2 className={`font-heading text-5xl md:text-8xl text-[var(--color-gela-espresso)] leading-[0.85] tracking-tighter mb-8 ${isRTL ? 'font-arabic leading-tight' : ''}`}>
-              {t.appreciation.title} <span className="italic font-light text-[var(--color-gela-green)]">{t.appreciation.highlight}</span>
-            </h2>
-            <p className={`text-xl font-light text-[var(--color-gela-espresso)]/50 ${isRTL ? 'font-arabic' : ''}`}>
-              {t.appreciation.subtitle}
-            </p>
-          </div>
+      <section className="py-32 bg-[var(--color-gela-cream)] border-t border-[var(--color-gela-espresso)]/5">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 mb-20 text-center">
+          <motion.span 
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className={`text-[10px] uppercase tracking-[0.4em] text-[var(--color-gela-green)] font-bold mb-6 block ${isRTL ? 'font-arabic tracking-normal' : ''}`}
+          >
+            {t.appreciation.label}
+          </motion.span>
+          <h2 className={`font-heading text-5xl md:text-8xl text-[var(--color-gela-espresso)] leading-[0.85] tracking-tighter mb-8 ${isRTL ? 'font-arabic leading-tight' : ''}`}>
+            {t.appreciation.title} <span className="italic font-light text-[var(--color-gela-green)]">{t.appreciation.highlight}</span>
+          </h2>
+          <p className={`text-xl font-light text-[var(--color-gela-espresso)]/50 ${isRTL ? 'font-arabic' : ''}`}>
+            {t.appreciation.subtitle}
+          </p>
         </div>
 
-        {/* Masonry-style Grid for Appreciation */}
+        {/* Masonry-style Grid - Reduced & Curated */}
         <div className="px-4">
           <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-            {[10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27].map((num) => (
+            {[10, 15, 16, 17, 18, 20, 22, 23, 24, 25, 27, 28].map((num) => (
               <motion.div
                 key={num}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: (num % 5) * 0.1 }}
-                className="relative overflow-hidden rounded-[20px] md:rounded-[32px] group"
+                className="relative overflow-hidden rounded-[24px] md:rounded-[32px] group"
               >
-                <img 
-                  src={`/ourstory/story1 (${num}).jpg`} 
-                  alt="Guest Story" 
-                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
-                />
+                <img src={`/ourstory/story1 (${num}).jpg`} className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
               </motion.div>
             ))}
             
-            {/* Inject a few Videos for dynamic feel */}
-            {[4, 5, 8].map((num) => (
+            {[4, 5, 8, 9].map((num) => (
               <motion.div
                 key={`vid-${num}`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 className="relative overflow-hidden rounded-[32px] aspect-[9/16]"
               >
-                <video 
-                  autoPlay 
-                  muted 
-                  loop 
-                  playsInline 
-                  className="w-full h-full object-cover"
-                >
+                <video autoPlay muted loop playsInline className="w-full h-full object-cover">
                   <source src={`/ourstory/story1 (${num}).mp4`} type="video/mp4" />
                 </video>
               </motion.div>
