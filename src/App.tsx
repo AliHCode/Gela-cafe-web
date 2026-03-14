@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'motion/react';
-import { MapPin, Clock, Phone, Instagram, Coffee, CreditCard, Car, Menu as MenuIcon, X, ArrowUpRight, Mail, MessageCircle, ArrowRight, Languages } from 'lucide-react';
+import { MapPin, Clock, Phone, Instagram, Coffee, CreditCard, Car, Menu as MenuIcon, X, ArrowUpRight, Mail, MessageCircle, ArrowRight, Languages, ChevronDown } from 'lucide-react';
 
 const MENU_CATEGORIES = [
   { id: 'signature', en: 'Signature Drinks', ar: 'مشروباتنا الخاصة' },
@@ -427,6 +427,7 @@ export default function App() {
   const [activeMenuCategory, setActiveMenuCategory] = useState(MENU_CATEGORIES[0].id);
   const [hoveredItemIndex, setHoveredItemIndex] = useState(0);
   const [gyroPermission, setGyroPermission] = useState<"default" | "granted" | "denied">("default");
+  const [isFooterNavOpen, setIsFooterNavOpen] = useState(false);
 
   useEffect(() => {
     document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
@@ -1242,39 +1243,40 @@ export default function App() {
                       </div>
                     </motion.div>
 
-                    {/* Unique 'Our Story' Widget */}
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.95 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.6 }}
-                      className="mt-8 flex justify-center"
-                    >
-                      <button
-                        onClick={() => {
-                          setView('story');
-                          window.scrollTo({ top: 0, behavior: 'smooth' });
-                        }}
-                        className="group relative flex items-center gap-6 p-1 pr-8 bg-white/40 backdrop-blur-xl border border-white/20 rounded-full hover:bg-white/60 transition-all duration-700 shadow-2xl hover:shadow-[0_20px_50px_rgba(45,84,60,0.1)] overflow-hidden"
-                      >
-                        <div className="w-12 h-12 rounded-full bg-[var(--color-gela-green)] flex items-center justify-center group-hover:rotate-[360deg] transition-transform duration-1000">
-                          <ArrowUpRight className="w-5 h-5 text-white" />
-                        </div>
-                        <div className="text-left flex flex-col items-start translate-x-0 group-hover:translate-x-1 transition-transform duration-500">
-                          <span className={`text-[10px] uppercase tracking-[0.3em] font-bold text-[var(--color-gela-green)] ${isRTL ? 'font-arabic tracking-normal' : ''}`}>
-                            {isRTL ? 'اكتشف' : 'Discover'}
-                          </span>
-                          <span className={`text-lg font-heading tracking-tight text-[var(--color-gela-espresso)] ${isRTL ? 'font-arabic' : ''}`}>
-                            {isRTL ? 'قصتنا الكاملة' : 'Our Full Story'}
-                          </span>
-                        </div>
-
-                        {/* Decorative background glow */}
-                        <div className="absolute -right-4 -top-8 w-24 h-24 bg-[var(--color-gela-green)]/10 blur-2xl rounded-full" />
-                      </button>
-                    </motion.div>
                   </div>
                 </div>
+
+                {/* Unique 'Our Story' Widget - Centered */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                  className="mt-20 flex justify-center"
+                >
+                  <button
+                    onClick={() => {
+                      setView('story');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    className="group relative flex items-center gap-6 p-1 pr-8 bg-white/40 backdrop-blur-xl border border-white/20 rounded-full hover:bg-white/60 transition-all duration-700 shadow-2xl hover:shadow-[0_20px_50px_rgba(45,84,60,0.1)] overflow-hidden"
+                  >
+                    <div className="w-12 h-12 rounded-full bg-[var(--color-gela-green)] flex items-center justify-center group-hover:rotate-[360deg] transition-transform duration-1000">
+                      <ArrowUpRight className="w-5 h-5 text-white" />
+                    </div>
+                    <div className="text-left flex flex-col items-start translate-x-0 group-hover:translate-x-1 transition-transform duration-500">
+                      <span className={`text-[10px] uppercase tracking-[0.3em] font-bold text-[var(--color-gela-green)] ${isRTL ? 'font-arabic tracking-normal' : ''}`}>
+                        {isRTL ? 'اكتشف' : 'Discover'}
+                      </span>
+                      <span className={`text-lg font-heading tracking-tight text-[var(--color-gela-espresso)] ${isRTL ? 'font-arabic' : ''}`}>
+                        {isRTL ? 'قصتنا الكاملة' : 'Our Full Story'}
+                      </span>
+                    </div>
+
+                    {/* Decorative background glow */}
+                    <div className="absolute -right-4 -top-8 w-24 h-24 bg-[var(--color-gela-green)]/10 blur-2xl rounded-full" />
+                  </button>
+                </motion.div>
               </div>
             </section>
 
@@ -1292,11 +1294,11 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      {/* Redesigned Aesthetic Footer */}
-      <footer className="relative bg-[var(--color-gela-green)] text-[var(--color-gela-cream)] pt-32 pb-12 overflow-hidden">
+      {/* Optimized Aesthetic Footer */}
+      <footer className="relative bg-[var(--color-gela-green)] text-[var(--color-gela-cream)] pt-16 pb-12 overflow-hidden">
 
-        <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 pt-16">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 mb-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-24 mb-16">
 
             {/* Column 1: Brand & Soul */}
             <div className="lg:col-span-5">
@@ -1336,9 +1338,28 @@ export default function App() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
+                className="h-full"
               >
-                <h4 className={`text-[10px] uppercase tracking-[0.3em] font-bold text-white mb-8 ${isRTL ? 'font-arabic tracking-normal' : ''}`}>{t.footer.nav}</h4>
-                <ul className="space-y-4">
+                {/* Mobile Header (Dropdown) */}
+                <button
+                  onClick={() => setIsFooterNavOpen(!isFooterNavOpen)}
+                  className="flex items-center justify-between w-full lg:hidden mb-6 group"
+                >
+                  <h4 className={`text-[10px] uppercase tracking-[0.3em] font-bold text-white ${isRTL ? 'font-arabic tracking-normal' : ''}`}>
+                    {t.footer.nav}
+                  </h4>
+                  <ChevronDown
+                    className={`w-4 h-4 text-white/50 transition-transform duration-500 ${isFooterNavOpen ? 'rotate-180' : ''}`}
+                  />
+                </button>
+
+                {/* Desktop Header (Static) */}
+                <h4 className={`hidden lg:block text-[10px] uppercase tracking-[0.3em] font-bold text-white mb-8 ${isRTL ? 'font-arabic tracking-normal' : ''}`}>
+                  {t.footer.nav}
+                </h4>
+
+                {/* Desktop Menu - Always Visible */}
+                <ul className="hidden lg:flex lg:flex-col space-y-4">
                   {['About', 'Menu', 'Story', 'Visit Us'].map((item) => (
                     <li key={item}>
                       <button
@@ -1359,6 +1380,39 @@ export default function App() {
                     </li>
                   ))}
                 </ul>
+
+                {/* Mobile Menu - Toggleable */}
+                <AnimatePresence>
+                  {isFooterNavOpen && (
+                    <motion.ul
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                      className="lg:hidden space-y-4 overflow-hidden pb-6"
+                    >
+                      {['About', 'Menu', 'Story', 'Visit Us'].map((item) => (
+                        <li key={item}>
+                          <button
+                            onClick={() => {
+                              if (item === 'Story') {
+                                setView('story');
+                                window.scrollTo({ top: 0, behavior: 'smooth' });
+                              } else {
+                                setView('landing');
+                                setTimeout(() => scrollToSection(item.toLowerCase().replace(' ', '-')), 100);
+                              }
+                            }}
+                            className={`text-lg font-light text-[var(--color-gela-cream)]/60 hover:text-[var(--color-gela-cream)] transition-colors relative group ${isRTL ? 'font-arabic' : ''}`}
+                          >
+                            {t.nav[item.toLowerCase().replace(' ', '') as keyof typeof t.nav]}
+                            <span className={`absolute -bottom-1 w-0 h-[1px] bg-[var(--color-gela-green)] transition-all duration-500 group-hover:w-full ${isRTL ? 'right-0' : 'left-0'}`} />
+                          </button>
+                        </li>
+                      ))}
+                    </motion.ul>
+                  )}
+                </AnimatePresence>
               </motion.div>
             </div>
 
