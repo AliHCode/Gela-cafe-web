@@ -639,15 +639,15 @@ export default function App() {
             >
               <motion.span
                 animate={isMobileMenuOpen ? { rotate: 45, y: 4 } : { rotate: 0, y: 0 }}
-                className={`rounded-full w-5 h-0.5 transition-all duration-500 ${isLightHeader ? 'bg-white' : 'bg-[var(--color-gela-espresso)]'}`}
+                className={`rounded-full w-5 h-0.5 ${isLightHeader ? 'bg-white' : 'bg-[var(--color-gela-espresso)]'}`}
               />
               <motion.span
                 animate={isMobileMenuOpen ? { opacity: 0 } : { opacity: 1 }}
-                className={`rounded-full w-5 h-0.5 transition-all duration-500 ${isLightHeader ? 'bg-white' : 'bg-[var(--color-gela-espresso)]'}`}
+                className={`rounded-full w-5 h-0.5 ${isLightHeader ? 'bg-white' : 'bg-[var(--color-gela-espresso)]'}`}
               />
               <motion.span
                 animate={isMobileMenuOpen ? { rotate: -45, y: -4 } : { rotate: 0, y: 0 }}
-                className={`rounded-full w-5 h-0.5 transition-all duration-500 ${isLightHeader ? 'bg-white' : 'bg-[var(--color-gela-espresso)]'}`}
+                className={`rounded-full w-5 h-0.5 ${isLightHeader ? 'bg-white' : 'bg-[var(--color-gela-espresso)]'}`}
               />
             </button>
           </div>
@@ -833,7 +833,7 @@ export default function App() {
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-center mb-40">
-                  <div className={`lg:col-span-5 ${isRTL ? 'lg:order-2' : ''}`}>
+                  <div className={`lg:col-span-5 order-2 ${isRTL ? 'lg:order-2' : 'lg:order-1'}`}>
                     <motion.div
                       initial={{ opacity: 0, x: isRTL ? 30 : -30 }}
                       whileInView={{ opacity: 1, x: 0 }}
@@ -847,7 +847,7 @@ export default function App() {
                       />
                     </motion.div>
                   </div>
-                  <div className={`lg:col-span-7 ${isRTL ? 'lg:order-1' : ''}`}>
+                  <div className={`lg:col-span-7 order-1 ${isRTL ? 'lg:order-1' : 'lg:order-2'}`}>
                     <motion.div
                       initial={{ opacity: 0, y: 30 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -1298,11 +1298,12 @@ export default function App() {
       <footer className="relative bg-[var(--color-gela-green)] text-[var(--color-gela-cream)] pt-16 pb-12 overflow-hidden">
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-24 mb-16">
+          <motion.div layout className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-24 mb-16">
 
             {/* Column 1: Brand & Soul */}
             <div className="lg:col-span-5">
               <motion.div
+                layout="position"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -1334,6 +1335,7 @@ export default function App() {
             {/* Column 2: Navigation */}
             <div className="lg:col-span-3">
               <motion.div
+                layout="position"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -1388,7 +1390,10 @@ export default function App() {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: 'auto', opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                      transition={{ 
+                        height: { duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] },
+                        opacity: { duration: 0.25 }
+                      }}
                       className="lg:hidden space-y-4 overflow-hidden pb-6"
                     >
                       {['About', 'Menu', 'Story', 'Visit Us'].map((item) => (
@@ -1419,6 +1424,7 @@ export default function App() {
             {/* Column 3: Newsletter */}
             <div className="lg:col-span-4">
               <motion.div
+                layout="position"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -1440,7 +1446,7 @@ export default function App() {
                 </div>
               </motion.div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Bottom Bar */}
           <div className="pt-12 border-t border-[var(--color-gela-cream)]/10 flex flex-col md:flex-row justify-between items-center gap-8">
