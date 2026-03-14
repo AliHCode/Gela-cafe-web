@@ -1241,16 +1241,39 @@ export default function App() {
                   >
                     {t.visit.contact.cta}
                   </a>
-                  <button 
-                    onClick={() => {
-                      setView('story');
-                      window.scrollTo({ top: 0, behavior: 'smooth' });
-                    }}
-                    className={`px-8 py-4 border border-[var(--color-gela-espresso)]/20 text-[var(--color-gela-espresso)] rounded-full text-[10px] uppercase tracking-widest font-bold hover:bg-[var(--color-gela-espresso)] hover:text-white transition-all duration-500 ${isRTL ? 'font-arabic tracking-normal' : ''}`}
-                  >
-                    {isRTL ? 'قصتنا' : 'Our Story'}
-                  </button>
                 </div>
+              </motion.div>
+
+              {/* Unique 'Our Story' Widget */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.6 }}
+                className="mt-8 flex justify-center"
+              >
+                <button
+                  onClick={() => {
+                    setView('story');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  className="group relative flex items-center gap-6 p-1 pr-8 bg-white/40 backdrop-blur-xl border border-white/20 rounded-full hover:bg-white/60 transition-all duration-700 shadow-2xl hover:shadow-[0_20px_50px_rgba(45,84,60,0.1)] overflow-hidden"
+                >
+                  <div className="w-12 h-12 rounded-full bg-[var(--color-gela-green)] flex items-center justify-center group-hover:rotate-[360deg] transition-transform duration-1000">
+                    <ArrowUpRight className="w-5 h-5 text-white" />
+                  </div>
+                  <div className="text-left flex flex-col items-start translate-x-0 group-hover:translate-x-1 transition-transform duration-500">
+                    <span className={`text-[10px] uppercase tracking-[0.3em] font-bold text-[var(--color-gela-green)] ${isRTL ? 'font-arabic tracking-normal' : ''}`}>
+                      {isRTL ? 'اكتشف' : 'Discover'}
+                    </span>
+                    <span className={`text-lg font-heading tracking-tight text-[var(--color-gela-espresso)] ${isRTL ? 'font-arabic' : ''}`}>
+                      {isRTL ? 'قصتنا الكاملة' : 'Our Full Story'}
+                    </span>
+                  </div>
+                  
+                  {/* Decorative background glow */}
+                  <div className="absolute -right-4 -top-8 w-24 h-24 bg-[var(--color-gela-green)]/10 blur-2xl rounded-full" />
+                </button>
               </motion.div>
             </div>
           </div>
