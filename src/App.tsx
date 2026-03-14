@@ -44,7 +44,7 @@ const getMenuImage = (category: string, index: number) => {
       "https://images.unsplash.com/photo-1563822249548-9a72b6353cd1?q=80&w=800&auto=format&fit=crop",
     ]
   };
-  
+
   const categoryImages = images['Signature Drinks']; // Simplified for consistency
   return categoryImages[index % categoryImages.length];
 };
@@ -123,33 +123,33 @@ const OurStory = ({ isRTL, lang }: { isRTL: boolean, lang: 'en' | 'ar' }) => {
     <div className="bg-[var(--color-gela-cream)] min-h-screen overflow-hidden">
       {/* Cinematic Hero */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <video 
-          autoPlay 
-          muted 
-          loop 
-          playsInline 
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
           className="absolute inset-0 w-full h-full object-cover scale-110 blur-[2px] brightness-[0.7]"
         >
           <source src="/ourstory/story1 (7).mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-[#1a3626]/40 via-transparent to-[var(--color-gela-cream)]" />
-        
+
         <div className="relative z-10 text-center px-6">
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className={`text-[10px] uppercase tracking-[0.5em] text-white/70 font-bold mb-6 block ${isRTL ? 'font-arabic tracking-normal' : ''}`}
           >
             EST. 2024
           </motion.span>
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
             className={`font-heading text-6xl md:text-8xl lg:text-9xl text-white leading-[0.8] tracking-tighter ${isRTL ? 'font-arabic leading-tight' : ''}`}
           >
-            {t.hero.title1} <br/>
-            <span className="font-light italic opacity-50">{t.hero.title2}</span> <br/>
+            {t.hero.title1} <br />
+            <span className="font-light italic opacity-50">{t.hero.title2}</span> <br />
             <span className="text-[var(--color-gela-green)]">{t.hero.highlight}</span>
           </motion.h1>
         </div>
@@ -179,7 +179,7 @@ const OurStory = ({ isRTL, lang }: { isRTL: boolean, lang: 'en' | 'ar' }) => {
             >
               <span className={`text-[10px] uppercase tracking-[0.4em] text-[var(--color-gela-green)] font-bold mb-6 block ${isRTL ? 'font-arabic tracking-normal' : ''}`}>{t.beginning.label}</span>
               <h2 className={`font-heading text-5xl md:text-7xl text-[var(--color-gela-espresso)] leading-[0.9] tracking-tighter mb-8 ${isRTL ? 'font-arabic leading-tight' : ''}`}>
-                {t.beginning.title} <br/>
+                {t.beginning.title} <br />
                 <span className="italic font-light text-[var(--color-gela-green)]">{t.beginning.highlight}</span>
               </h2>
               <p className={`text-xl md:text-2xl font-light leading-relaxed text-[var(--color-gela-espresso)]/70 ${isRTL ? 'font-arabic' : ''}`}>
@@ -197,28 +197,28 @@ const OurStory = ({ isRTL, lang }: { isRTL: boolean, lang: 'en' | 'ar' }) => {
             <div className="lg:col-span-12 mb-16 text-center">
               <span className={`text-[10px] uppercase tracking-[0.4em] text-[var(--color-gela-green)] font-bold mb-6 block ${isRTL ? 'font-arabic tracking-normal' : ''}`}>{t.vision.label}</span>
               <h2 className={`font-heading text-5xl md:text-8xl leading-[0.8] tracking-tighter ${isRTL ? 'font-arabic leading-tight' : ''}`}>
-                {t.vision.title} <br/>
+                {t.vision.title} <br />
                 <span className="italic font-light text-[var(--color-gela-green)]">{t.vision.highlight}</span>
               </h2>
             </div>
-            
-            <motion.div 
+
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               className="lg:col-span-5 aspect-[3/4] rounded-[40px] overflow-hidden"
             >
               <img src="/ourstory/1.jpg" alt="Process" className="w-full h-full object-cover" />
             </motion.div>
-            
+
             <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6 h-full">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 className="aspect-square rounded-[32px] overflow-hidden"
               >
                 <img src="/ourstory/story1 (2).jpg" alt="Detail" className="w-full h-full object-cover" />
               </motion.div>
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.1 }}
@@ -244,7 +244,7 @@ const OurStory = ({ isRTL, lang }: { isRTL: boolean, lang: 'en' | 'ar' }) => {
         <div className="relative z-10 text-center max-w-4xl px-6">
           <span className={`text-[10px] uppercase tracking-[0.4em] text-[var(--color-gela-green)] font-bold mb-6 block ${isRTL ? 'font-arabic tracking-normal' : ''}`}>{t.sanctuary.label}</span>
           <h2 className={`font-heading text-6xl md:text-9xl text-white leading-[0.8] tracking-tighter mb-8 ${isRTL ? 'font-arabic leading-tight' : ''}`}>
-            {t.sanctuary.title} <br/>
+            {t.sanctuary.title} <br />
             <span className="italic font-light opacity-60">{t.sanctuary.highlight}</span>
           </h2>
           <p className={`text-xl md:text-3xl font-light text-white/80 leading-relaxed ${isRTL ? 'font-arabic' : ''}`}>
@@ -286,7 +286,7 @@ const OurStory = ({ isRTL, lang }: { isRTL: boolean, lang: 'en' | 'ar' }) => {
             >
               <span className={`text-[10px] uppercase tracking-[0.4em] text-[var(--color-gela-green)] font-bold mb-6 block ${isRTL ? 'font-arabic tracking-normal' : ''}`}>{t.soul.label}</span>
               <h2 className={`font-heading text-5xl md:text-7xl text-[var(--color-gela-espresso)] leading-[0.9] tracking-tighter mb-8 ${isRTL ? 'font-arabic leading-tight' : ''}`}>
-                {t.soul.title} <br/>
+                {t.soul.title} <br />
                 <span className="italic font-light text-[var(--color-gela-green)]">{t.soul.highlight}</span>
               </h2>
               <p className={`text-xl md:text-2xl font-light leading-relaxed text-[var(--color-gela-espresso)]/70 ${isRTL ? 'font-arabic' : ''}`}>
@@ -300,7 +300,7 @@ const OurStory = ({ isRTL, lang }: { isRTL: boolean, lang: 'en' | 'ar' }) => {
       {/* Appreciation Post Gallery */}
       <section className="py-32 bg-[var(--color-gela-cream)] border-t border-[var(--color-gela-espresso)]/5">
         <div className="max-w-7xl mx-auto px-6 md:px-12 mb-20 text-center">
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             className={`text-[10px] uppercase tracking-[0.4em] text-[var(--color-gela-green)] font-bold mb-6 block ${isRTL ? 'font-arabic tracking-normal' : ''}`}
@@ -329,7 +329,7 @@ const OurStory = ({ isRTL, lang }: { isRTL: boolean, lang: 'en' | 'ar' }) => {
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
               </motion.div>
             ))}
-            
+
             {[4, 5, 8, 9].map((num) => (
               <motion.div
                 key={`vid-${num}`}
@@ -448,7 +448,7 @@ export default function App() {
         // Beta: -180 to 180. Map 20 to 60 to 0 to height (more sensitive)
         const yPercent = Math.max(0, Math.min(100, ((e.beta - 20) / 40) * 100));
         const y = (yPercent / 100) * window.innerHeight;
-        
+
         mouseX.set(x);
         mouseY.set(y);
       }
@@ -498,7 +498,7 @@ export default function App() {
   // Smooth springs for the blobs
   const blobX1 = useSpring(useTransform(mouseX, v => v - 200), { damping: 18, stiffness: 60 });
   const blobY1 = useSpring(useTransform(mouseY, v => v - 200), { damping: 18, stiffness: 60 });
-  
+
   const blobX2 = useSpring(useTransform(mouseX, v => v - 150), { damping: 25, stiffness: 50 });
   const blobY2 = useSpring(useTransform(mouseY, v => v - 150), { damping: 25, stiffness: 50 });
 
@@ -507,19 +507,19 @@ export default function App() {
     const width = typeof window !== 'undefined' ? window.innerWidth : 1000;
     return (v - width / 2) * 0.15; // 15% of distance from center
   }), { damping: 28, stiffness: 120 });
-  
+
   const parallaxY1 = useSpring(useTransform(mouseY, (v) => {
     const height = typeof window !== 'undefined' ? window.innerHeight : 1000;
     const isDesktop = typeof window !== 'undefined' && window.innerWidth >= 768;
     const offset = (v - height / 2) * 0.15;
     return isDesktop ? Math.max(offset, 0) : offset;
   }), { damping: 28, stiffness: 120 });
-  
+
   const parallaxX2 = useSpring(useTransform(mouseX, (v) => {
     const width = typeof window !== 'undefined' ? window.innerWidth : 1000;
     return (v - width / 2) * 0.3; // 30% of distance from center
   }), { damping: 28, stiffness: 120 });
-  
+
   const parallaxY2 = useSpring(useTransform(mouseY, (v) => {
     const height = typeof window !== 'undefined' ? window.innerHeight : 1000;
     const isDesktop = typeof window !== 'undefined' && window.innerWidth >= 768;
@@ -548,17 +548,16 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[var(--color-gela-cream)] font-sans text-[var(--color-gela-espresso)] selection:bg-[var(--color-gela-green)] selection:text-[var(--color-gela-cream)]">
       {/* Header / Navigation - Full Width Iconic */}
-      <nav 
+      <nav
         dir="ltr"
-        className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-700 py-2 md:py-3 ${
-        isScrolled 
-          ? 'bg-[var(--color-gela-cream)]/90 backdrop-blur-md border-b border-[var(--color-gela-espresso)]/5' 
-          : 'bg-transparent border-b border-transparent'
-      }`}>
+        className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-700 py-2 md:py-3 ${isScrolled
+            ? 'bg-[var(--color-gela-cream)]/90 backdrop-blur-md border-b border-[var(--color-gela-espresso)]/5'
+            : 'bg-transparent border-b border-transparent'
+          }`}>
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center relative">
-          
+
           {/* Logo */}
-          <motion.button 
+          <motion.button
             onClick={() => {
               setView('landing');
               window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -589,7 +588,7 @@ export default function App() {
                 className={`transition-all duration-300 relative group whitespace-nowrap font-semibold ${isRTL ? 'font-arabic tracking-normal text-xl' : 'text-[13px] uppercase tracking-[0.3em]'} ${isLightHeader ? 'text-white/80 hover:text-white' : 'text-[var(--color-gela-espresso)]/80 hover:text-[var(--color-gela-espresso)]'} ${view === 'story' && item === 'Story' ? (isLightHeader ? '!text-white' : '!text-[var(--color-gela-espresso)]') : ''}`}
               >
                 {t.nav[item.toLowerCase().replace(' ', '') as keyof typeof t.nav]}
-                <span className={`absolute -bottom-2 left-1/2 -translate-x-1/2 h-[1px] transition-all duration-500 ${isLightHeader ? 'bg-white' : 'bg-[var(--color-gela-espresso)]'} ${ (view === 'story' && item === 'Story') || (view === 'landing' && item !== 'Story' && false) ? 'w-full' : 'w-0 group-hover:w-full' }`} />
+                <span className={`absolute -bottom-2 left-1/2 -translate-x-1/2 h-[1px] transition-all duration-500 ${isLightHeader ? 'bg-white' : 'bg-[var(--color-gela-espresso)]'} ${(view === 'story' && item === 'Story') || (view === 'landing' && item !== 'Story' && false) ? 'w-full' : 'w-0 group-hover:w-full'}`} />
               </button>
             ))}
           </div>
@@ -606,26 +605,26 @@ export default function App() {
                 {lang === 'en' ? (
                   /* Oman Flag SVG */
                   <svg viewBox="0 0 900 600" className="w-full h-full object-cover">
-                    <rect width="900" height="600" fill="#fff"/>
-                    <rect width="900" height="400" y="200" fill="#008000"/>
-                    <rect width="900" height="200" y="200" fill="#d21034"/>
-                    <rect width="300" height="600" fill="#d21034"/>
-                    <path d="M150 40 L170 70 L150 100 L130 70 Z" fill="#fff"/>
+                    <rect width="900" height="600" fill="#fff" />
+                    <rect width="900" height="400" y="200" fill="#008000" />
+                    <rect width="900" height="200" y="200" fill="#d21034" />
+                    <rect width="300" height="600" fill="#d21034" />
+                    <path d="M150 40 L170 70 L150 100 L130 70 Z" fill="#fff" />
                   </svg>
                 ) : (
                   /* UK Flag SVG */
                   <svg viewBox="0 0 60 30" className="w-full h-full object-cover">
-                    <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
-                    <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
-                    <path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="4"/>
-                    <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
-                    <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
+                    <path d="M0,0 v30 h60 v-30 z" fill="#012169" />
+                    <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6" />
+                    <path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="4" />
+                    <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10" />
+                    <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6" />
                   </svg>
                 )}
               </div>
             </button>
 
-            <button 
+            <button
               onClick={() => scrollToSection('visit-us')}
               className={`hidden sm:flex items-center justify-center border rounded-full uppercase tracking-[0.2em] font-bold transition-all duration-500 px-6 py-2.5 ${isRTL ? 'font-arabic text-lg tracking-normal' : 'text-[12px]'} ${isLightHeader ? 'border-white/20 text-white hover:bg-white hover:text-black' : 'border-[var(--color-gela-espresso)]/20 text-[var(--color-gela-espresso)] hover:bg-[var(--color-gela-espresso)] hover:text-white'}`}
             >
@@ -633,21 +632,21 @@ export default function App() {
             </button>
 
             {/* Hamburger Menu Button - Visible on mobile only */}
-            <button 
+            <button
               onClick={() => setIsMobileMenuOpen(true)}
               className="relative flex md:hidden flex-col items-center justify-center gap-1.5 w-7 h-7"
             >
-              <motion.span 
+              <motion.span
                 animate={isMobileMenuOpen ? { rotate: 45, y: 4 } : { rotate: 0, y: 0 }}
-                className={`rounded-full w-5 h-0.5 transition-all duration-500 ${isLightHeader ? 'bg-white' : 'bg-[var(--color-gela-espresso)]'}`} 
+                className={`rounded-full w-5 h-0.5 transition-all duration-500 ${isLightHeader ? 'bg-white' : 'bg-[var(--color-gela-espresso)]'}`}
               />
-              <motion.span 
+              <motion.span
                 animate={isMobileMenuOpen ? { opacity: 0 } : { opacity: 1 }}
-                className={`rounded-full w-5 h-0.5 transition-all duration-500 ${isLightHeader ? 'bg-white' : 'bg-[var(--color-gela-espresso)]'}`} 
+                className={`rounded-full w-5 h-0.5 transition-all duration-500 ${isLightHeader ? 'bg-white' : 'bg-[var(--color-gela-espresso)]'}`}
               />
-              <motion.span 
+              <motion.span
                 animate={isMobileMenuOpen ? { rotate: -45, y: -4 } : { rotate: 0, y: 0 }}
-                className={`rounded-full w-5 h-0.5 transition-all duration-500 ${isLightHeader ? 'bg-white' : 'bg-[var(--color-gela-espresso)]'}`} 
+                className={`rounded-full w-5 h-0.5 transition-all duration-500 ${isLightHeader ? 'bg-white' : 'bg-[var(--color-gela-espresso)]'}`}
               />
             </button>
           </div>
@@ -669,7 +668,7 @@ export default function App() {
                 <X className="w-8 h-8" />
               </button>
             </div>
-            
+
             <div className="flex-1 flex flex-col items-center justify-center space-y-10 px-8">
               {['About', 'Menu', 'Story', 'Visit Us'].map((item, idx) => (
                 <motion.button
@@ -716,569 +715,568 @@ export default function App() {
             transition={{ duration: 0.5 }}
           >
             {/* Interactive Hero Section */}
-      <section 
-        id="hero" 
-        className="relative h-screen flex items-center justify-center overflow-hidden bg-[var(--color-gela-cream)]"
-        onMouseMove={handleMouseMove}
-      >
-        {/* Interactive Blobs */}
-        <motion.div 
-          className="absolute w-[400px] h-[400px] rounded-full blur-[100px] opacity-40 pointer-events-none mix-blend-multiply"
-          style={{
-            background: 'var(--color-gela-green)',
-            x: blobX1,
-            y: blobY1,
-            left: 0,
-            top: 0
-          }}
-        />
-        <motion.div 
-          className="absolute w-[300px] h-[300px] rounded-full blur-[80px] opacity-30 pointer-events-none mix-blend-multiply"
-          style={{
-            background: 'var(--color-gela-matcha)',
-            x: blobX2,
-            y: blobY2,
-            left: 0,
-            top: 0
-          }}
-        />
-
-        {/* Floating Parallax Images Removed */}
-
-        {/* Main Content */}
-        <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pointer-events-none flex flex-col items-center">
-          <motion.h1 
-            style={{ x: parallaxX2, y: parallaxY2 }}
-            className={`font-heading text-5xl md:text-8xl lg:text-9xl text-[var(--color-gela-espresso)] leading-[1.1] tracking-tight mb-12 md:mb-10 ${isRTL ? 'font-arabic leading-[1.2]' : ''}`}
-          >
-            {t.hero.title}<br/>
-            <span className="text-[var(--color-gela-green)] italic font-light">{t.hero.stay}</span>
-          </motion.h1>
-          
-          <motion.p 
-            style={{ x: parallaxX1, y: parallaxY1 }}
-            className={`text-base md:text-xl text-[var(--color-gela-espresso)]/80 font-light mb-12 md:mb-10 max-w-lg mx-auto ${isRTL ? 'font-arabic leading-relaxed' : ''}`}
-          >
-            {t.hero.desc}
-          </motion.p>
-
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4 }}
-            className="pointer-events-auto"
-          >
-              <button 
-                onClick={() => {
-                  scrollToSection('menu');
-                  requestGyroPermission();
-                }}
-                className={`inline-flex items-center justify-center px-10 py-4 bg-[var(--color-gela-espresso)] text-white uppercase tracking-widest text-sm rounded-full hover:bg-[var(--color-gela-green)] transition-all duration-500 hover:scale-105 ${isRTL ? 'font-arabic tracking-normal' : ''}`}
-              >
-                {t.hero.button}
-              </button>
-          </motion.div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <motion.div 
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center space-y-2 text-[var(--color-gela-espresso)]/50"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <span className={`text-xs uppercase tracking-widest ${isRTL ? 'font-arabic' : ''}`}>{t.hero.scroll}</span>
-          <div className="w-[1px] h-12 bg-gradient-to-b from-[var(--color-gela-espresso)]/50 to-transparent" />
-        </motion.div>
-      </section>
-
-      {/* Storytelling About Section */}
-      <section id="about" className="py-40 bg-[var(--color-gela-cream)] overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          {/* Chapter 1: The Vision */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-center mb-40">
-            <div className={`lg:col-span-7 ${isRTL ? 'lg:order-2' : ''}`}>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="relative"
-              >
-                <div className={`absolute -top-10 font-mono text-[120px] opacity-[0.03] select-none ${isRTL ? '-right-10' : '-left-10'}`}>01</div>
-                <span className={`text-[10px] uppercase tracking-[0.4em] text-[var(--color-gela-green)] font-bold mb-6 block ${isRTL ? 'font-arabic tracking-normal' : ''}`}>{t.about.ch1.label}</span>
-                <h2 className={`font-heading text-5xl md:text-7xl lg:text-8xl text-[var(--color-gela-espresso)] leading-[0.9] tracking-tighter mb-10 ${isRTL ? 'font-arabic leading-[1.2]' : ''}`}>
-                  {t.about.ch1.title} <br/>
-                  <span className="italic font-light text-[var(--color-gela-green)]">{t.about.ch1.highlight}</span>
-                </h2>
-                <div className={`h-[1px] w-24 bg-[var(--color-gela-green)] mb-10 ${isRTL ? 'mr-0 ml-auto' : ''}`} />
-                <p className={`text-xl md:text-2xl leading-relaxed text-[var(--color-gela-espresso)]/80 font-light max-w-xl ${isRTL ? 'font-arabic' : ''}`}>
-                  {t.about.ch1.text}
-                </p>
-              </motion.div>
-            </div>
-            <div className={`lg:col-span-5 ${isRTL ? 'lg:order-1' : ''}`}>
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-                className={`aspect-[3/4] rounded-[40px] overflow-hidden shadow-2xl transition-transform duration-700 ${isRTL ? '-rotate-2 hover:rotate-0' : 'rotate-2 hover:rotate-0'}`}
-              >
-                <img 
-                  src="/sanctuary.jpg" 
-                  alt="Gela Sanctuary" 
-                  className="w-full h-full object-cover"
-                />
-              </motion.div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-center mb-40">
-            <div className={`lg:col-span-5 ${isRTL ? 'lg:order-2' : ''}`}>
-              <motion.div
-                initial={{ opacity: 0, x: isRTL ? 30 : -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="relative aspect-square rounded-full overflow-hidden shadow-2xl border-8 border-white"
-              >
-                <img 
-                  src="https://images.unsplash.com/photo-1515823662972-da6a2e4d3002?q=80&w=1000&auto=format&fit=crop" 
-                  alt="Matcha Preparation" 
-                  className="w-full h-full object-cover"
-                />
-              </motion.div>
-            </div>
-            <div className={`lg:col-span-7 ${isRTL ? 'lg:order-1' : ''}`}>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className={`relative ${isRTL ? 'lg:pr-12' : 'lg:pl-12'}`}
-              >
-                <div className={`absolute -top-10 font-mono text-[120px] opacity-[0.03] select-none ${isRTL ? '-left-10' : '-right-10'}`}>02</div>
-                <span className={`text-[10px] uppercase tracking-[0.4em] text-[var(--color-gela-green)] font-bold mb-6 block ${isRTL ? 'font-arabic tracking-normal' : ''}`}>{t.about.ch2.label}</span>
-                <h2 className={`font-heading text-5xl md:text-7xl lg:text-8xl text-[var(--color-gela-espresso)] leading-[0.9] tracking-tighter mb-10 ${isRTL ? 'font-arabic leading-[1.2]' : ''}`}>
-                  {t.about.ch2.title} <br/>
-                  <span className="italic font-light text-[var(--color-gela-green)]">{t.about.ch2.highlight}</span>
-                </h2>
-                <p className={`text-xl md:text-2xl leading-relaxed text-[var(--color-gela-espresso)]/80 font-light max-w-xl ${isRTL ? 'font-arabic' : ''}`}>
-                  {t.about.ch2.text}
-                </p>
-              </motion.div>
-            </div>
-          </div>
-
-          {/* Chapter 3: The Community */}
-          <div className="text-center max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+            <section
+              id="hero"
+              className="relative h-screen flex items-center justify-center overflow-hidden bg-[var(--color-gela-cream)]"
+              onMouseMove={handleMouseMove}
             >
-              <span className={`text-[10px] uppercase tracking-[0.4em] text-[var(--color-gela-green)] font-bold mb-6 block ${isRTL ? 'font-arabic tracking-normal' : ''}`}>{t.about.ch3.label}</span>
-              <h2 className={`font-heading text-6xl md:text-9xl text-[var(--color-gela-espresso)] leading-[0.8] tracking-tighter mb-12 ${isRTL ? 'font-arabic leading-[1.1]' : ''}`}>
-                {t.about.ch3.title} <br/>
-                <span className="italic font-light text-[var(--color-gela-green)]">{t.about.ch3.highlight}</span>
-              </h2>
-              <p className={`text-xl md:text-3xl leading-relaxed text-[var(--color-gela-espresso)]/60 font-light italic ${isRTL ? 'font-arabic' : ''}`}>
-                {t.about.ch3.text}
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+              {/* Interactive Blobs */}
+              <motion.div
+                className="absolute w-[400px] h-[400px] rounded-full blur-[100px] opacity-40 pointer-events-none mix-blend-multiply"
+                style={{
+                  background: 'var(--color-gela-green)',
+                  x: blobX1,
+                  y: blobY1,
+                  left: 0,
+                  top: 0
+                }}
+              />
+              <motion.div
+                className="absolute w-[300px] h-[300px] rounded-full blur-[80px] opacity-30 pointer-events-none mix-blend-multiply"
+                style={{
+                  background: 'var(--color-gela-matcha)',
+                  x: blobX2,
+                  y: blobY2,
+                  left: 0,
+                  top: 0
+                }}
+              />
 
-      {/* Compact & Density-Focused Menu Section */}
-      <section id="menu" className="py-24 bg-[var(--color-gela-cream)] relative overflow-hidden">
-        {/* Subtle Decorative Elements */}
-        <div className="absolute top-0 right-0 w-1/4 h-full bg-[var(--color-gela-green)]/5 -skew-x-12 translate-x-1/2 pointer-events-none" />
-        
-        <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
-            <div className="max-w-xl">
-              <motion.span 
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                className={`text-[10px] uppercase tracking-[0.4em] text-[var(--color-gela-green)] font-bold mb-4 block ${isRTL ? 'font-arabic tracking-normal' : ''}`}
-              >
-                {t.menu.label}
-              </motion.span>
-              <h2 className={`font-heading text-5xl md:text-7xl text-[var(--color-gela-espresso)] leading-[0.9] tracking-tighter ${isRTL ? 'font-arabic leading-[1.2]' : ''}`}>
-                {t.menu.title} <span className="italic font-light text-[var(--color-gela-green)]">{t.menu.highlight}</span>
-              </h2>
-            </div>
-            
-            {/* Compact Category Navigation */}
-            <div className="flex flex-wrap gap-2">
-              {MENU_CATEGORIES.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => {
-                    setActiveMenuCategory(category.id);
-                    setHoveredItemIndex(0);
-                  }}
-                  className={`px-8 py-3.5 rounded-full transition-all duration-500 border ${
-                    activeMenuCategory === category.id 
-                      ? 'bg-[var(--color-gela-espresso)] text-white border-[var(--color-gela-espresso)] shadow-xl' 
-                      : 'bg-transparent text-[var(--color-gela-espresso)] border-[var(--color-gela-espresso)]/20 hover:border-[var(--color-gela-espresso)]'
-                  } ${isRTL ? 'text-xl font-arabic' : 'text-base uppercase tracking-widest font-bold'}`}
+              {/* Floating Parallax Images Removed */}
+
+              {/* Main Content */}
+              <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pointer-events-none flex flex-col items-center">
+                <motion.h1
+                  style={{ x: parallaxX2, y: parallaxY2 }}
+                  className={`font-heading text-5xl md:text-8xl lg:text-9xl text-[var(--color-gela-espresso)] leading-[1.1] tracking-tight mb-12 md:mb-10 ${isRTL ? 'font-arabic leading-[1.2]' : ''}`}
                 >
-                  {category[lang]}
-                </button>
-              ))}
-            </div>
-          </div>
+                  {t.hero.title}<br />
+                  <span className="text-[var(--color-gela-green)] italic font-light">{t.hero.stay}</span>
+                </motion.h1>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            {/* Menu Items - Compact Dual Column List */}
-            <div className="lg:col-span-8">
-              <AnimatePresence mode="wait">
+                <motion.p
+                  style={{ x: parallaxX1, y: parallaxY1 }}
+                  className={`text-base md:text-xl text-[var(--color-gela-espresso)]/80 font-light mb-12 md:mb-10 max-w-lg mx-auto ${isRTL ? 'font-arabic leading-relaxed' : ''}`}
+                >
+                  {t.hero.desc}
+                </motion.p>
+
                 <motion.div
-                  key={activeMenuCategory}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                  className="grid grid-cols-1 md:grid-cols-2 gap-x-12"
+                  transition={{ duration: 1, delay: 0.4 }}
+                  className="pointer-events-auto"
                 >
-                  {MENU_DATA[activeMenuCategory as keyof typeof MENU_DATA].map((item: any, index: number) => (
-                    <motion.div 
-                      key={item.en}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: index * 0.05 }}
-                      className="group relative flex items-center justify-between py-5 border-b border-[var(--color-gela-espresso)]/10 cursor-pointer overflow-hidden px-4"
-                      onMouseEnter={() => setHoveredItemIndex(index)}
+                  <button
+                    onClick={() => {
+                      scrollToSection('menu');
+                      requestGyroPermission();
+                    }}
+                    className={`inline-flex items-center justify-center px-10 py-4 bg-[var(--color-gela-espresso)] text-white uppercase tracking-widest text-sm rounded-full hover:bg-[var(--color-gela-green)] transition-all duration-500 hover:scale-105 ${isRTL ? 'font-arabic tracking-normal' : ''}`}
+                  >
+                    {t.hero.button}
+                  </button>
+                </motion.div>
+              </div>
+
+              {/* Scroll Indicator */}
+              <motion.div
+                className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center space-y-2 text-[var(--color-gela-espresso)]/50"
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <span className={`text-xs uppercase tracking-widest ${isRTL ? 'font-arabic' : ''}`}>{t.hero.scroll}</span>
+                <div className="w-[1px] h-12 bg-gradient-to-b from-[var(--color-gela-espresso)]/50 to-transparent" />
+              </motion.div>
+            </section>
+
+            {/* Storytelling About Section */}
+            <section id="about" className="py-40 bg-[var(--color-gela-cream)] overflow-hidden">
+              <div className="max-w-7xl mx-auto px-6 md:px-12">
+                {/* Chapter 1: The Vision */}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-center mb-40">
+                  <div className={`lg:col-span-7 ${isRTL ? 'lg:order-2' : ''}`}>
+                    <motion.div
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      className="relative"
                     >
-                      {/* Hover Background Effect */}
-                      <div className="absolute inset-0 bg-[var(--color-gela-green)]/5 translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-700 ease-out" />
-                      
-                      <div className="relative z-10 flex items-baseline gap-4">
-                        <span className="font-mono text-[9px] opacity-30 group-hover:opacity-100 transition-opacity">
-                          {index + 1 < 10 ? `0${index + 1}` : index + 1}
-                        </span>
-                        <h3 className={`font-heading text-lg md:text-xl text-[var(--color-gela-espresso)] group-hover:translate-x-1 transition-transform duration-500 ${isRTL ? 'font-arabic' : ''}`}>
-                          {item[lang]}
-                        </h3>
-                      </div>
-
-                      <div className="relative z-10 flex items-center gap-4">
-                        <span className="font-mono text-xs font-medium text-[var(--color-gela-espresso)]/40 group-hover:text-[var(--color-gela-green)] transition-colors">
-                          {item.price}
-                        </span>
-                        <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all duration-500 -translate-y-1" />
-                      </div>
+                      <div className={`absolute -top-10 font-mono text-[120px] opacity-[0.03] select-none ${isRTL ? '-right-10' : '-left-10'}`}>01</div>
+                      <span className={`text-[10px] uppercase tracking-[0.4em] text-[var(--color-gela-green)] font-bold mb-6 block ${isRTL ? 'font-arabic tracking-normal' : ''}`}>{t.about.ch1.label}</span>
+                      <h2 className={`font-heading text-5xl md:text-7xl lg:text-8xl text-[var(--color-gela-espresso)] leading-[0.9] tracking-tighter mb-10 ${isRTL ? 'font-arabic leading-[1.2]' : ''}`}>
+                        {t.about.ch1.title} <br />
+                        <span className="italic font-light text-[var(--color-gela-green)]">{t.about.ch1.highlight}</span>
+                      </h2>
+                      <div className={`h-[1px] w-24 bg-[var(--color-gela-green)] mb-10 ${isRTL ? 'mr-0 ml-auto' : ''}`} />
+                      <p className={`text-xl md:text-2xl leading-relaxed text-[var(--color-gela-espresso)]/80 font-light max-w-xl ${isRTL ? 'font-arabic' : ''}`}>
+                        {t.about.ch1.text}
+                      </p>
                     </motion.div>
-                  ))}
-                </motion.div>
-              </AnimatePresence>
-            </div>
-
-            {/* Visual Showcase - Smaller Sticky Card */}
-            <div className="lg:col-span-4 sticky top-32 hidden lg:block">
-              <div className="relative group p-4 bg-white rounded-[32px] shadow-sm border border-[var(--color-gela-espresso)]/5">
-                <div className="aspect-square rounded-2xl overflow-hidden shadow-inner bg-[var(--color-gela-espresso)]/5">
-                  <AnimatePresence mode="wait">
-                    <motion.img
-                      key={`${activeMenuCategory}-${hoveredItemIndex}`}
-                      src={getMenuImage(activeMenuCategory, hoveredItemIndex)}
-                      alt="Menu Item"
-                      initial={{ opacity: 0, filter: 'blur(5px)' }}
-                      animate={{ opacity: 1, filter: 'blur(0px)' }}
-                      exit={{ opacity: 0, filter: 'blur(5px)' }}
-                      transition={{ duration: 0.5 }}
-                      className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-1000"
-                      referrerPolicy="no-referrer"
-                    />
-                  </AnimatePresence>
+                  </div>
+                  <div className={`lg:col-span-5 ${isRTL ? 'lg:order-1' : ''}`}>
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+                      className={`aspect-[3/4] rounded-[40px] overflow-hidden shadow-2xl transition-transform duration-700 ${isRTL ? '-rotate-2 hover:rotate-0' : 'rotate-2 hover:rotate-0'}`}
+                    >
+                      <img
+                        src="/sanctuary.jpg"
+                        alt="Gela Sanctuary"
+                        className="w-full h-full object-cover"
+                      />
+                    </motion.div>
+                  </div>
                 </div>
-                
-                <div className="mt-6">
-                  <motion.h4 
-                    key={`${activeMenuCategory}-${hoveredItemIndex}-title`}
-                    initial={{ opacity: 0, x: isRTL ? 10 : -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    className={`font-heading text-xl text-[var(--color-gela-espresso)] mb-2 ${isRTL ? 'font-arabic' : ''}`}
+
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-center mb-40">
+                  <div className={`lg:col-span-5 ${isRTL ? 'lg:order-2' : ''}`}>
+                    <motion.div
+                      initial={{ opacity: 0, x: isRTL ? 30 : -30 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      className="relative aspect-square rounded-full overflow-hidden shadow-2xl border-8 border-white"
+                    >
+                      <img
+                        src="https://images.unsplash.com/photo-1515823662972-da6a2e4d3002?q=80&w=1000&auto=format&fit=crop"
+                        alt="Matcha Preparation"
+                        className="w-full h-full object-cover"
+                      />
+                    </motion.div>
+                  </div>
+                  <div className={`lg:col-span-7 ${isRTL ? 'lg:order-1' : ''}`}>
+                    <motion.div
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      className={`relative ${isRTL ? 'lg:pr-12' : 'lg:pl-12'}`}
+                    >
+                      <div className={`absolute -top-10 font-mono text-[120px] opacity-[0.03] select-none ${isRTL ? '-left-10' : '-right-10'}`}>02</div>
+                      <span className={`text-[10px] uppercase tracking-[0.4em] text-[var(--color-gela-green)] font-bold mb-6 block ${isRTL ? 'font-arabic tracking-normal' : ''}`}>{t.about.ch2.label}</span>
+                      <h2 className={`font-heading text-5xl md:text-7xl lg:text-8xl text-[var(--color-gela-espresso)] leading-[0.9] tracking-tighter mb-10 ${isRTL ? 'font-arabic leading-[1.2]' : ''}`}>
+                        {t.about.ch2.title} <br />
+                        <span className="italic font-light text-[var(--color-gela-green)]">{t.about.ch2.highlight}</span>
+                      </h2>
+                      <p className={`text-xl md:text-2xl leading-relaxed text-[var(--color-gela-espresso)]/80 font-light max-w-xl ${isRTL ? 'font-arabic' : ''}`}>
+                        {t.about.ch2.text}
+                      </p>
+                    </motion.div>
+                  </div>
+                </div>
+
+                {/* Chapter 3: The Community */}
+                <div className="text-center max-w-4xl mx-auto">
+                  <motion.div
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
                   >
-                    {MENU_DATA[activeMenuCategory as keyof typeof MENU_DATA][hoveredItemIndex]?.[lang]}
-                  </motion.h4>
-                  <p className={`text-[9px] uppercase tracking-[0.2em] text-[var(--color-gela-green)] font-bold ${isRTL ? 'font-arabic tracking-normal' : ''}`}>{t.menu.featured}</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Mobile Image Reveal */}
-            <div className="lg:hidden mt-12 grid grid-cols-2 gap-4">
-              <div className="aspect-square rounded-2xl overflow-hidden shadow-sm">
-                <img 
-                  src={getMenuImage(activeMenuCategory, hoveredItemIndex)} 
-                  alt="Menu Item" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="flex flex-col justify-center">
-                <p className="text-[10px] uppercase tracking-widest text-[var(--color-gela-green)] font-bold mb-2">Detailed Selection</p>
-                <h4 className={`font-heading text-2xl text-[var(--color-gela-espresso)] ${isRTL ? 'font-arabic' : ''}`}>
-                  {MENU_DATA[activeMenuCategory as keyof typeof MENU_DATA][hoveredItemIndex]?.[lang]}
-                </h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Visual Savor: Infinite Parallax Gallery */}
-      <section id="gallery" className="py-24 bg-[var(--color-gela-green)] relative overflow-hidden">
-        {/* Background Highlight Text Removed as requested */}
-
-        <div className="relative z-10 flex flex-col gap-8 md:gap-12">
-          <div className="px-6 md:px-12 max-w-7xl mx-auto w-full">
-            <motion.span 
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              className={`text-[10px] uppercase tracking-[0.4em] text-[var(--color-gela-cream)]/60 font-bold mb-4 block text-center md:text-left ${isRTL ? 'md:text-right font-arabic tracking-normal' : ''}`}
-            >
-              {t.gallery.label}
-            </motion.span>
-            <h2 className={`font-heading text-4xl md:text-6xl text-white leading-[0.9] tracking-tighter text-center md:text-left ${isRTL ? 'md:text-right font-arabic leading-[1.2]' : ''}`}>
-              {t.gallery.title} <span className="italic font-light text-[var(--color-gela-cream)]/40">{t.gallery.highlight}</span>
-            </h2>
-          </div>
-
-          <div className="flex flex-col gap-6 md:gap-8 overflow-hidden">
-            {/* Row 1: Running Carousel (Forced LTR to prevent Arabic gap) */}
-            <div className="flex group" dir="ltr">
-              <motion.div 
-                animate={{ x: [0, -2500] }}
-                transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
-                className="flex gap-4 md:gap-8 flex-nowrap shrink-0"
-              >
-                {[...Array(4)].map((_, i) => (
-                  <div key={i} className="flex gap-4 md:gap-8 shrink-0">
-                    {[1, 2, 3, 4, 5].map((num) => (
-                      <motion.div 
-                        key={`${i}-${num}`}
-                        className="w-[300px] md:w-[450px] aspect-[4/5] rounded-3xl overflow-hidden glass shadow-2xl shrink-0 border border-white/10"
-                      >
-                        <img 
-                          src={`/1 (${num}).jpg`} 
-                          alt={`Gallery ${num}`} 
-                          className="w-full h-full object-cover saturate-[0.85]"
-                          referrerPolicy="no-referrer"
-                        />
-                      </motion.div>
-                    ))}
-                  </div>
-                ))}
-              </motion.div>
-            </div>
-
-            {/* Row 2: Running Carousel (Reverse) */}
-            <div className="flex group" dir="ltr">
-              <motion.div 
-                animate={{ x: [-2500, 0] }}
-                transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-                className="flex gap-4 md:gap-8 flex-nowrap shrink-0"
-              >
-                {[...Array(4)].map((_, i) => (
-                  <div key={i} className="flex gap-4 md:gap-8 shrink-0">
-                    {[6, 7, 8, 9, 10].map((num) => (
-                      <motion.div 
-                        key={`${i}-${num}`}
-                        className="w-[320px] md:w-[480px] aspect-[16/10] rounded-3xl overflow-hidden glass shadow-2xl shrink-0 border border-white/10"
-                      >
-                        <img 
-                          src={`/1 (${num}).jpg`} 
-                          alt={`Gallery ${num}`} 
-                          className="w-full h-full object-cover saturate-[0.85]"
-                          referrerPolicy="no-referrer"
-                        />
-                      </motion.div>
-                    ))}
-                  </div>
-                ))}
-              </motion.div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="visit-us" className="py-32 bg-[var(--color-gela-cream)] relative overflow-hidden">
-        {/* Background Decorative Text */}
-        <div className="absolute top-20 left-10 pointer-events-none select-none opacity-[0.03] font-heading text-[15vw] leading-none font-bold text-[var(--color-gela-green)]">
-          EXPERIENCE
-        </div>
-
-        <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
-            
-            {/* Panel 1: Visual Experience */}
-            <motion.div 
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="lg:w-5/12 relative group rounded-[40px] overflow-hidden aspect-square"
-            >
-              <motion.div 
-                className="w-full h-full"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-              >
-                <img 
-                  src="/newsanctuary.jpg" 
-                  alt="Cafe Interior" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-gela-green)]/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-700" />
-              </motion.div>
-              
-              <div className="absolute bottom-10 left-10 right-10">
-                <motion.span 
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 }}
-                  className={`text-[10px] uppercase tracking-[0.4em] text-white/70 font-bold mb-4 block ${isRTL ? 'font-arabic tracking-normal' : ''}`}
-                >
-                  {t.visit.label}
-                </motion.span>
-                <motion.h2 
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4 }}
-                  className={`font-heading text-4xl md:text-5xl lg:text-6xl text-white leading-[0.9] tracking-tighter ${isRTL ? 'font-arabic leading-[1.2]' : ''}`}
-                >
-                  {t.visit.title} <br/>
-                  <span className="italic font-light">{t.visit.highlight}</span>
-                </motion.h2>
-              </div>
-            </motion.div>
-
-            {/* Panel 2 & 3: Discovery & Connection */}
-            <div className="lg:w-7/12 flex flex-col gap-8 md:gap-12">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 flex-1">
-                
-                {/* Discovery Card (Map Visual) */}
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.2 }}
-                  className="bg-[var(--color-gela-green)] rounded-[40px] p-10 flex flex-col justify-between text-[var(--color-gela-cream)] group relative overflow-hidden"
-                >
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-gela-cream)]/5 rounded-bl-full translate-x-8 -translate-y-8 group-hover:translate-x-4 group-hover:-translate-y-4 transition-transform duration-700" />
-                  
-                  <div>
-                    <MapPin className={`w-10 h-10 mb-8 text-[var(--color-gela-green)] bg-[var(--color-gela-cream)] p-2 rounded-xl ${isRTL ? 'ml-0' : ''}`} strokeWidth={1.5} />
-                    <h3 className={`font-heading text-3xl mb-4 ${isRTL ? 'font-arabic' : ''}`}>{t.visit.find.title}</h3>
-                    <p className={`font-light text-[var(--color-gela-cream)]/70 text-lg whitespace-pre-line ${isRTL ? 'font-arabic' : ''}`}>
-                      {t.visit.find.addr}
+                    <span className={`text-[10px] uppercase tracking-[0.4em] text-[var(--color-gela-green)] font-bold mb-6 block ${isRTL ? 'font-arabic tracking-normal' : ''}`}>{t.about.ch3.label}</span>
+                    <h2 className={`font-heading text-6xl md:text-9xl text-[var(--color-gela-espresso)] leading-[0.8] tracking-tighter mb-12 ${isRTL ? 'font-arabic leading-[1.1]' : ''}`}>
+                      {t.about.ch3.title} <br />
+                      <span className="italic font-light text-[var(--color-gela-green)]">{t.about.ch3.highlight}</span>
+                    </h2>
+                    <p className={`text-xl md:text-3xl leading-relaxed text-[var(--color-gela-espresso)]/60 font-light italic ${isRTL ? 'font-arabic' : ''}`}>
+                      {t.about.ch3.text}
                     </p>
+                  </motion.div>
+                </div>
+              </div>
+            </section>
+
+            {/* Compact & Density-Focused Menu Section */}
+            <section id="menu" className="py-24 bg-[var(--color-gela-cream)] relative overflow-hidden">
+              {/* Subtle Decorative Elements */}
+              <div className="absolute top-0 right-0 w-1/4 h-full bg-[var(--color-gela-green)]/5 -skew-x-12 translate-x-1/2 pointer-events-none" />
+
+              <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
+                  <div className="max-w-xl">
+                    <motion.span
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      className={`text-[10px] uppercase tracking-[0.4em] text-[var(--color-gela-green)] font-bold mb-4 block ${isRTL ? 'font-arabic tracking-normal' : ''}`}
+                    >
+                      {t.menu.label}
+                    </motion.span>
+                    <h2 className={`font-heading text-5xl md:text-7xl text-[var(--color-gela-espresso)] leading-[0.9] tracking-tighter ${isRTL ? 'font-arabic leading-[1.2]' : ''}`}>
+                      {t.menu.title} <span className="italic font-light text-[var(--color-gela-green)]">{t.menu.highlight}</span>
+                    </h2>
                   </div>
 
-                  <a 
-                    href="https://maps.app.goo.gl/jf8SJ2bWmSWUZFJz6" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`inline-flex items-center gap-4 text-xs uppercase tracking-[0.3em] font-bold group-hover:gap-6 transition-all mt-12 ${isRTL ? 'font-arabic tracking-normal' : ''}`}
-                  >
-                    {t.visit.find.cta} <ArrowRight className={`w-4 h-4 ${isRTL ? 'rotate-180' : ''}`} />
-                  </a>
-                </motion.div>
+                  {/* Compact Category Navigation */}
+                  <div className="flex flex-wrap gap-2">
+                    {MENU_CATEGORIES.map((category) => (
+                      <button
+                        key={category.id}
+                        onClick={() => {
+                          setActiveMenuCategory(category.id);
+                          setHoveredItemIndex(0);
+                        }}
+                        className={`px-8 py-3.5 rounded-full transition-all duration-500 border ${activeMenuCategory === category.id
+                            ? 'bg-[var(--color-gela-espresso)] text-white border-[var(--color-gela-espresso)] shadow-xl'
+                            : 'bg-transparent text-[var(--color-gela-espresso)] border-[var(--color-gela-espresso)]/20 hover:border-[var(--color-gela-espresso)]'
+                          } ${isRTL ? 'text-xl font-arabic' : 'text-base uppercase tracking-widest font-bold'}`}
+                      >
+                        {category[lang]}
+                      </button>
+                    ))}
+                  </div>
+                </div>
 
-                {/* Connection Card */}
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3 }}
-                  className="bg-white rounded-[40px] p-10 border border-[var(--color-gela-espresso)]/5 shadow-sm flex flex-col justify-between group"
-                >
-                  <div>
-                    <Clock className="w-10 h-10 mb-8 text-[var(--color-gela-green)]" strokeWidth={1.5} />
-                    <h3 className={`font-heading text-3xl mb-6 text-[var(--color-gela-espresso)] ${isRTL ? 'font-arabic' : ''}`}>{t.visit.hours.title}</h3>
-                    <div className="space-y-4">
-                      <div className="flex justify-between items-center text-sm font-medium text-[var(--color-gela-espresso)]/60">
-                        <span className={isRTL ? 'font-arabic' : ''}>{t.visit.hours.sunWed}</span>
-                        <span className={`text-[var(--color-gela-espresso)] ${isRTL ? 'font-arabic' : ''}`}>9 {t.visit.hours.am} – 10 {t.visit.hours.pm}</span>
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                  {/* Menu Items - Compact Dual Column List */}
+                  <div className="lg:col-span-8">
+                    <AnimatePresence mode="wait">
+                      <motion.div
+                        key={activeMenuCategory}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                        className="grid grid-cols-1 md:grid-cols-2 gap-x-12"
+                      >
+                        {MENU_DATA[activeMenuCategory as keyof typeof MENU_DATA].map((item: any, index: number) => (
+                          <motion.div
+                            key={item.en}
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: index * 0.05 }}
+                            className="group relative flex items-center justify-between py-5 border-b border-[var(--color-gela-espresso)]/10 cursor-pointer overflow-hidden px-4"
+                            onMouseEnter={() => setHoveredItemIndex(index)}
+                          >
+                            {/* Hover Background Effect */}
+                            <div className="absolute inset-0 bg-[var(--color-gela-green)]/5 translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-700 ease-out" />
+
+                            <div className="relative z-10 flex items-baseline gap-4">
+                              <span className="font-mono text-[9px] opacity-30 group-hover:opacity-100 transition-opacity">
+                                {index + 1 < 10 ? `0${index + 1}` : index + 1}
+                              </span>
+                              <h3 className={`font-heading text-lg md:text-xl text-[var(--color-gela-espresso)] group-hover:translate-x-1 transition-transform duration-500 ${isRTL ? 'font-arabic' : ''}`}>
+                                {item[lang]}
+                              </h3>
+                            </div>
+
+                            <div className="relative z-10 flex items-center gap-4">
+                              <span className="font-mono text-xs font-medium text-[var(--color-gela-espresso)]/40 group-hover:text-[var(--color-gela-green)] transition-colors">
+                                {item.price}
+                              </span>
+                              <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all duration-500 -translate-y-1" />
+                            </div>
+                          </motion.div>
+                        ))}
+                      </motion.div>
+                    </AnimatePresence>
+                  </div>
+
+                  {/* Visual Showcase - Smaller Sticky Card */}
+                  <div className="lg:col-span-4 sticky top-32 hidden lg:block">
+                    <div className="relative group p-4 bg-white rounded-[32px] shadow-sm border border-[var(--color-gela-espresso)]/5">
+                      <div className="aspect-square rounded-2xl overflow-hidden shadow-inner bg-[var(--color-gela-espresso)]/5">
+                        <AnimatePresence mode="wait">
+                          <motion.img
+                            key={`${activeMenuCategory}-${hoveredItemIndex}`}
+                            src={getMenuImage(activeMenuCategory, hoveredItemIndex)}
+                            alt="Menu Item"
+                            initial={{ opacity: 0, filter: 'blur(5px)' }}
+                            animate={{ opacity: 1, filter: 'blur(0px)' }}
+                            exit={{ opacity: 0, filter: 'blur(5px)' }}
+                            transition={{ duration: 0.5 }}
+                            className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-1000"
+                            referrerPolicy="no-referrer"
+                          />
+                        </AnimatePresence>
                       </div>
-                      <div className="w-full h-[1px] bg-[var(--color-gela-espresso)]/5" />
-                      <div className="flex justify-between items-center text-sm font-medium text-[var(--color-gela-espresso)]/60">
-                        <span className={isRTL ? 'font-arabic' : ''}>{t.visit.hours.thuSat}</span>
-                        <span className={`text-[var(--color-gela-espresso)] ${isRTL ? 'font-arabic' : ''}`}>9 {t.visit.hours.am} – 11 {t.visit.hours.pm}</span>
+
+                      <div className="mt-6">
+                        <motion.h4
+                          key={`${activeMenuCategory}-${hoveredItemIndex}-title`}
+                          initial={{ opacity: 0, x: isRTL ? 10 : -10 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          className={`font-heading text-xl text-[var(--color-gela-espresso)] mb-2 ${isRTL ? 'font-arabic' : ''}`}
+                        >
+                          {MENU_DATA[activeMenuCategory as keyof typeof MENU_DATA][hoveredItemIndex]?.[lang]}
+                        </motion.h4>
+                        <p className={`text-[9px] uppercase tracking-[0.2em] text-[var(--color-gela-green)] font-bold ${isRTL ? 'font-arabic tracking-normal' : ''}`}>{t.menu.featured}</p>
                       </div>
                     </div>
                   </div>
-                  
-                  <div className="mt-12 flex items-center justify-between">
-                    <span className={`text-[10px] uppercase tracking-widest font-bold opacity-30 ${isRTL ? 'font-arabic tracking-normal' : ''}`}>{t.visit.hours.status}</span>
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-gela-green)] animate-pulse" />
+
+                  {/* Mobile Image Reveal */}
+                  <div className="lg:hidden mt-12 grid grid-cols-2 gap-4">
+                    <div className="aspect-square rounded-2xl overflow-hidden shadow-sm">
+                      <img
+                        src={getMenuImage(activeMenuCategory, hoveredItemIndex)}
+                        alt="Menu Item"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="flex flex-col justify-center">
+                      <p className="text-[10px] uppercase tracking-widest text-[var(--color-gela-green)] font-bold mb-2">Detailed Selection</p>
+                      <h4 className={`font-heading text-2xl text-[var(--color-gela-espresso)] ${isRTL ? 'font-arabic' : ''}`}>
+                        {MENU_DATA[activeMenuCategory as keyof typeof MENU_DATA][hoveredItemIndex]?.[lang]}
+                      </h4>
+                    </div>
                   </div>
-                </motion.div>
+                </div>
+              </div>
+            </section>
+
+            {/* Visual Savor: Infinite Parallax Gallery */}
+            <section id="gallery" className="py-24 bg-[var(--color-gela-green)] relative overflow-hidden">
+              {/* Background Highlight Text Removed as requested */}
+
+              <div className="relative z-10 flex flex-col gap-8 md:gap-12">
+                <div className="px-6 md:px-12 max-w-7xl mx-auto w-full">
+                  <motion.span
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    className={`text-[10px] uppercase tracking-[0.4em] text-[var(--color-gela-cream)]/60 font-bold mb-4 block text-center md:text-left ${isRTL ? 'md:text-right font-arabic tracking-normal' : ''}`}
+                  >
+                    {t.gallery.label}
+                  </motion.span>
+                  <h2 className={`font-heading text-4xl md:text-6xl text-white leading-[0.9] tracking-tighter text-center md:text-left ${isRTL ? 'md:text-right font-arabic leading-[1.2]' : ''}`}>
+                    {t.gallery.title} <span className="italic font-light text-[var(--color-gela-cream)]/40">{t.gallery.highlight}</span>
+                  </h2>
+                </div>
+
+                <div className="flex flex-col gap-6 md:gap-8 overflow-hidden">
+                  {/* Row 1: Running Carousel (Forced LTR to prevent Arabic gap) */}
+                  <div className="flex group" dir="ltr">
+                    <motion.div
+                      animate={{ x: [0, -2500] }}
+                      transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
+                      className="flex gap-4 md:gap-8 flex-nowrap shrink-0"
+                    >
+                      {[...Array(4)].map((_, i) => (
+                        <div key={i} className="flex gap-4 md:gap-8 shrink-0">
+                          {[1, 2, 3, 4, 5].map((num) => (
+                            <motion.div
+                              key={`${i}-${num}`}
+                              className="w-[300px] md:w-[450px] aspect-[4/5] rounded-3xl overflow-hidden glass shadow-2xl shrink-0 border border-white/10"
+                            >
+                              <img
+                                src={`/1 (${num}).jpg`}
+                                alt={`Gallery ${num}`}
+                                className="w-full h-full object-cover saturate-[0.85]"
+                                referrerPolicy="no-referrer"
+                              />
+                            </motion.div>
+                          ))}
+                        </div>
+                      ))}
+                    </motion.div>
+                  </div>
+
+                  {/* Row 2: Running Carousel (Reverse) */}
+                  <div className="flex group" dir="ltr">
+                    <motion.div
+                      animate={{ x: [-2500, 0] }}
+                      transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+                      className="flex gap-4 md:gap-8 flex-nowrap shrink-0"
+                    >
+                      {[...Array(4)].map((_, i) => (
+                        <div key={i} className="flex gap-4 md:gap-8 shrink-0">
+                          {[6, 7, 8, 9, 10].map((num) => (
+                            <motion.div
+                              key={`${i}-${num}`}
+                              className="w-[320px] md:w-[480px] aspect-[16/10] rounded-3xl overflow-hidden glass shadow-2xl shrink-0 border border-white/10"
+                            >
+                              <img
+                                src={`/1 (${num}).jpg`}
+                                alt={`Gallery ${num}`}
+                                className="w-full h-full object-cover saturate-[0.85]"
+                                referrerPolicy="no-referrer"
+                              />
+                            </motion.div>
+                          ))}
+                        </div>
+                      ))}
+                    </motion.div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section id="visit-us" className="py-32 bg-[var(--color-gela-cream)] relative overflow-hidden">
+              {/* Background Decorative Text */}
+              <div className="absolute top-20 left-10 pointer-events-none select-none opacity-[0.03] font-heading text-[15vw] leading-none font-bold text-[var(--color-gela-green)]">
+                EXPERIENCE
               </div>
 
-              {/* Bottom Interactive Contact Bar */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.4 }}
-                className="bg-[var(--color-gela-cream)] border-2 border-[var(--color-gela-green)]/10 rounded-[40px] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12"
-              >
-                <div className="flex items-center gap-8">
-                  <div className="w-16 h-16 rounded-full bg-[var(--color-gela-green)]/5 flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-[var(--color-gela-green)]" strokeWidth={1.5} />
-                  </div>
-                  <div>
-                    <h4 className={`font-heading text-xl text-[var(--color-gela-espresso)] ${isRTL ? 'font-arabic' : ''}`}>{t.visit.contact.title}</h4>
-                    <p className={`text-2xl md:text-3xl font-light text-[var(--color-gela-green)] ${isRTL ? 'font-sans' : ''}`} dir="ltr">+968 7661 8357</p>
-                  </div>
-                </div>
+              <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+                <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
 
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a 
-                    href="https://wa.me/96876618357"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`px-8 py-4 bg-[var(--color-gela-espresso)] text-white rounded-full text-[10px] uppercase tracking-widest font-bold hover:bg-[var(--color-gela-green)] transition-all duration-500 ${isRTL ? 'font-arabic tracking-normal' : ''}`}
+                  {/* Panel 1: Visual Experience */}
+                  <motion.div
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    className="lg:w-5/12 relative group rounded-[40px] overflow-hidden aspect-square"
                   >
-                    {t.visit.contact.cta}
-                  </a>
-                </div>
-              </motion.div>
+                    <motion.div
+                      className="w-full h-full"
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+                    >
+                      <img
+                        src="/newsanctuary.jpg"
+                        alt="Cafe Interior"
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-gela-green)]/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-700" />
+                    </motion.div>
 
-              {/* Unique 'Our Story' Widget */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.6 }}
-                className="mt-8 flex justify-center"
-              >
-                <button
-                  onClick={() => {
-                    setView('story');
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                  }}
-                  className="group relative flex items-center gap-6 p-1 pr-8 bg-white/40 backdrop-blur-xl border border-white/20 rounded-full hover:bg-white/60 transition-all duration-700 shadow-2xl hover:shadow-[0_20px_50px_rgba(45,84,60,0.1)] overflow-hidden"
-                >
-                  <div className="w-12 h-12 rounded-full bg-[var(--color-gela-green)] flex items-center justify-center group-hover:rotate-[360deg] transition-transform duration-1000">
-                    <ArrowUpRight className="w-5 h-5 text-white" />
+                    <div className="absolute bottom-10 left-10 right-10">
+                      <motion.span
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.3 }}
+                        className={`text-[10px] uppercase tracking-[0.4em] text-white/70 font-bold mb-4 block ${isRTL ? 'font-arabic tracking-normal' : ''}`}
+                      >
+                        {t.visit.label}
+                      </motion.span>
+                      <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.4 }}
+                        className={`font-heading text-4xl md:text-5xl lg:text-6xl text-white leading-[0.9] tracking-tighter ${isRTL ? 'font-arabic leading-[1.2]' : ''}`}
+                      >
+                        {t.visit.title} <br />
+                        <span className="italic font-light">{t.visit.highlight}</span>
+                      </motion.h2>
+                    </div>
+                  </motion.div>
+
+                  {/* Panel 2 & 3: Discovery & Connection */}
+                  <div className="lg:w-7/12 flex flex-col gap-8 md:gap-12">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 flex-1">
+
+                      {/* Discovery Card (Map Visual) */}
+                      <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
+                        className="bg-[var(--color-gela-green)] rounded-[40px] p-10 flex flex-col justify-between text-[var(--color-gela-cream)] group relative overflow-hidden"
+                      >
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-gela-cream)]/5 rounded-bl-full translate-x-8 -translate-y-8 group-hover:translate-x-4 group-hover:-translate-y-4 transition-transform duration-700" />
+
+                        <div>
+                          <MapPin className={`w-10 h-10 mb-8 text-[var(--color-gela-green)] bg-[var(--color-gela-cream)] p-2 rounded-xl ${isRTL ? 'ml-0' : ''}`} strokeWidth={1.5} />
+                          <h3 className={`font-heading text-3xl mb-4 ${isRTL ? 'font-arabic' : ''}`}>{t.visit.find.title}</h3>
+                          <p className={`font-light text-[var(--color-gela-cream)]/70 text-lg whitespace-pre-line ${isRTL ? 'font-arabic' : ''}`}>
+                            {t.visit.find.addr}
+                          </p>
+                        </div>
+
+                        <a
+                          href="https://maps.app.goo.gl/jf8SJ2bWmSWUZFJz6"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`inline-flex items-center gap-4 text-xs uppercase tracking-[0.3em] font-bold group-hover:gap-6 transition-all mt-12 ${isRTL ? 'font-arabic tracking-normal' : ''}`}
+                        >
+                          {t.visit.find.cta} <ArrowRight className={`w-4 h-4 ${isRTL ? 'rotate-180' : ''}`} />
+                        </a>
+                      </motion.div>
+
+                      {/* Connection Card */}
+                      <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3 }}
+                        className="bg-white rounded-[40px] p-10 border border-[var(--color-gela-espresso)]/5 shadow-sm flex flex-col justify-between group"
+                      >
+                        <div>
+                          <Clock className="w-10 h-10 mb-8 text-[var(--color-gela-green)]" strokeWidth={1.5} />
+                          <h3 className={`font-heading text-3xl mb-6 text-[var(--color-gela-espresso)] ${isRTL ? 'font-arabic' : ''}`}>{t.visit.hours.title}</h3>
+                          <div className="space-y-4">
+                            <div className="flex justify-between items-center text-sm font-medium text-[var(--color-gela-espresso)]/60">
+                              <span className={isRTL ? 'font-arabic' : ''}>{t.visit.hours.sunWed}</span>
+                              <span className={`text-[var(--color-gela-espresso)] ${isRTL ? 'font-arabic' : ''}`}>9 {t.visit.hours.am} – 10 {t.visit.hours.pm}</span>
+                            </div>
+                            <div className="w-full h-[1px] bg-[var(--color-gela-espresso)]/5" />
+                            <div className="flex justify-between items-center text-sm font-medium text-[var(--color-gela-espresso)]/60">
+                              <span className={isRTL ? 'font-arabic' : ''}>{t.visit.hours.thuSat}</span>
+                              <span className={`text-[var(--color-gela-espresso)] ${isRTL ? 'font-arabic' : ''}`}>9 {t.visit.hours.am} – 11 {t.visit.hours.pm}</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="mt-12 flex items-center justify-between">
+                          <span className={`text-[10px] uppercase tracking-widest font-bold opacity-30 ${isRTL ? 'font-arabic tracking-normal' : ''}`}>{t.visit.hours.status}</span>
+                          <div className="w-2 h-2 rounded-full bg-[var(--color-gela-green)] animate-pulse" />
+                        </div>
+                      </motion.div>
+                    </div>
+
+                    {/* Bottom Interactive Contact Bar */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.4 }}
+                      className="bg-[var(--color-gela-cream)] border-2 border-[var(--color-gela-green)]/10 rounded-[40px] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12"
+                    >
+                      <div className="flex items-center gap-8">
+                        <div className="w-16 h-16 rounded-full bg-[var(--color-gela-green)]/5 flex items-center justify-center">
+                          <Phone className="w-6 h-6 text-[var(--color-gela-green)]" strokeWidth={1.5} />
+                        </div>
+                        <div>
+                          <h4 className={`font-heading text-xl text-[var(--color-gela-espresso)] ${isRTL ? 'font-arabic' : ''}`}>{t.visit.contact.title}</h4>
+                          <p className={`text-2xl md:text-3xl font-light text-[var(--color-gela-green)] ${isRTL ? 'font-sans' : ''}`} dir="ltr">+968 7661 8357</p>
+                        </div>
+                      </div>
+
+                      <div className="flex flex-col sm:flex-row gap-4">
+                        <a
+                          href="https://wa.me/96876618357"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`px-8 py-4 bg-[var(--color-gela-espresso)] text-white rounded-full text-[10px] uppercase tracking-widest font-bold hover:bg-[var(--color-gela-green)] transition-all duration-500 ${isRTL ? 'font-arabic tracking-normal' : ''}`}
+                        >
+                          {t.visit.contact.cta}
+                        </a>
+                      </div>
+                    </motion.div>
+
+                    {/* Unique 'Our Story' Widget */}
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.6 }}
+                      className="mt-8 flex justify-center"
+                    >
+                      <button
+                        onClick={() => {
+                          setView('story');
+                          window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }}
+                        className="group relative flex items-center gap-6 p-1 pr-8 bg-white/40 backdrop-blur-xl border border-white/20 rounded-full hover:bg-white/60 transition-all duration-700 shadow-2xl hover:shadow-[0_20px_50px_rgba(45,84,60,0.1)] overflow-hidden"
+                      >
+                        <div className="w-12 h-12 rounded-full bg-[var(--color-gela-green)] flex items-center justify-center group-hover:rotate-[360deg] transition-transform duration-1000">
+                          <ArrowUpRight className="w-5 h-5 text-white" />
+                        </div>
+                        <div className="text-left flex flex-col items-start translate-x-0 group-hover:translate-x-1 transition-transform duration-500">
+                          <span className={`text-[10px] uppercase tracking-[0.3em] font-bold text-[var(--color-gela-green)] ${isRTL ? 'font-arabic tracking-normal' : ''}`}>
+                            {isRTL ? 'اكتشف' : 'Discover'}
+                          </span>
+                          <span className={`text-lg font-heading tracking-tight text-[var(--color-gela-espresso)] ${isRTL ? 'font-arabic' : ''}`}>
+                            {isRTL ? 'قصتنا الكاملة' : 'Our Full Story'}
+                          </span>
+                        </div>
+
+                        {/* Decorative background glow */}
+                        <div className="absolute -right-4 -top-8 w-24 h-24 bg-[var(--color-gela-green)]/10 blur-2xl rounded-full" />
+                      </button>
+                    </motion.div>
                   </div>
-                  <div className="text-left flex flex-col items-start translate-x-0 group-hover:translate-x-1 transition-transform duration-500">
-                    <span className={`text-[10px] uppercase tracking-[0.3em] font-bold text-[var(--color-gela-green)] ${isRTL ? 'font-arabic tracking-normal' : ''}`}>
-                      {isRTL ? 'اكتشف' : 'Discover'}
-                    </span>
-                    <span className={`text-lg font-heading tracking-tight text-[var(--color-gela-espresso)] ${isRTL ? 'font-arabic' : ''}`}>
-                      {isRTL ? 'قصتنا الكاملة' : 'Our Full Story'}
-                    </span>
-                  </div>
-                  
-                  {/* Decorative background glow */}
-                  <div className="absolute -right-4 -top-8 w-24 h-24 bg-[var(--color-gela-green)]/10 blur-2xl rounded-full" />
-                </button>
-              </motion.div>
-            </div>
-          </div>
-        </div>
-      </section>
+                </div>
+              </div>
+            </section>
 
           </motion.main>
         ) : (
@@ -1299,7 +1297,7 @@ export default function App() {
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 pt-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 mb-24">
-            
+
             {/* Column 1: Brand & Soul */}
             <div className="lg:col-span-5">
               <motion.div
@@ -1311,14 +1309,14 @@ export default function App() {
                 <p className={`text-xl md:text-2xl font-light leading-relaxed text-[var(--color-gela-cream)]/70 mb-10 max-w-sm ${isRTL ? 'font-arabic' : ''}`}>
                   {t.footer.desc}
                 </p>
-                
+
                 <div className="flex gap-4">
                   {[
                     { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/gela.om/' },
                     { icon: MessageCircle, label: 'WhatsApp', href: 'https://wa.me/96876618357' },
                     { icon: Mail, label: 'Email', href: 'mailto:hello@gelacafe.com' }
                   ].map((social, idx) => (
-                    <a 
+                    <a
                       key={idx}
                       href={social.href}
                       className="w-12 h-12 rounded-full border border-[var(--color-gela-cream)]/20 flex items-center justify-center hover:bg-[var(--color-gela-green)] hover:border-[var(--color-gela-green)] transition-all duration-500 group"
@@ -1343,7 +1341,7 @@ export default function App() {
                 <ul className="space-y-4">
                   {['About', 'Menu', 'Story', 'Visit Us'].map((item) => (
                     <li key={item}>
-                      <button 
+                      <button
                         onClick={() => {
                           if (item === 'Story') {
                             setView('story');
@@ -1375,10 +1373,10 @@ export default function App() {
               >
                 <h4 className={`text-[10px] uppercase tracking-[0.3em] font-bold text-white mb-6 ${isRTL ? 'font-arabic tracking-normal' : ''}`}>{t.footer.stay}</h4>
                 <p className={`text-sm text-[var(--color-gela-cream)]/50 mb-8 ${isRTL ? 'font-arabic' : ''}`}>{t.footer.newsDesc}</p>
-                
+
                 <div className="relative">
-                  <input 
-                    type="email" 
+                  <input
+                    type="email"
                     placeholder={t.footer.placeholder}
                     className={`w-full bg-transparent border-b border-[var(--color-gela-cream)]/20 py-4 text-lg font-light focus:outline-none focus:border-[var(--color-gela-green)] transition-colors placeholder:text-[var(--color-gela-cream)]/20 ${isRTL ? 'font-arabic text-right' : ''}`}
                   />
@@ -1400,7 +1398,7 @@ export default function App() {
                 <a href="#" className="hover:text-[var(--color-gela-cream)] transition-colors">Terms</a>
               </div>
             </div>
-            
+
             <div className={`flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-[var(--color-gela-cream)]/40 font-bold italic ${isRTL ? 'font-arabic tracking-normal' : ''}`}>
               {t.footer.madeWith} <span className="text-white not-italic">{t.footer.intention}</span> {t.footer.in} <span className="text-[#FF3B30] not-italic">{t.footer.oman}</span>
             </div>
